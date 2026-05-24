@@ -1,6 +1,6 @@
 import { useState, useRef, useCallback } from "react";
 
-const SERVER_URL = "https://egel-production.up.railway.app";
+const SERVER_URL = "https://van-groot-naar-klein-backend-production.up.railway.app";
 
 export default function VideoCompressor() {
   const [file, setFile] = useState(null);
