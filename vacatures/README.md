@@ -11,13 +11,19 @@ en technische rollen (engineer, netarchitect, adviseur, toezichthouder).
 **Domeinen** – energie (warmtenetten, energietransitie, zon, energie-infrastructuur),
 afval & grondstoffen, bouwkunde / civiele techniek.
 
-**Voorkeur** – Noord-Holland en omstreken; zowel vast (HVC) als interim/zzp (Freep).
+**Voorkeur** – Noord-Holland en omstreken; zowel vast als interim/zzp.
+
+**Doelopdrachtgevers (hebben voorrang)** – Waternet, Oasen, HVC, WarmtelinQ (Gasunie).
+Hun vacatures en inhuuropdrachten staan bovenaan de lijst, ook als ze buiten Noord-Holland vallen.
 
 ## Bronnen
 
 | Bron | Wat | Waar zoeken |
 |---|---|---|
 | HVC | Vaste banen | werkenbijhvc.nl (vacatures-energie, vacatures-duurzaamheid, techniek) |
+| Waternet | Vast + inhuur | waternet.nl/werken-bij; inhuur via mipublic.nl/opdrachtgevers/stichting-waternet, overheidzzp.nl, freep.nl |
+| Oasen | Vaste banen | werkenbijoasen.nl, oasen.easycruit.com |
+| WarmtelinQ (Gasunie) | Vast + inhuur | werkenbijgasunie.nl, freelance.nl, overheidzzp.nl (zoekterm "WarmtelinQ") |
 | Freep | Interim-/zzp-inhuur bij overheid | freep.nl/opdracht/… categorieën Energie, Afval & Grondstoffen, Bouwkunde/Civiele techniek |
 | Overig (optioneel) | Aanvulling | flexspot.io, depubliekepartner.nl, watertalent.nl |
 
