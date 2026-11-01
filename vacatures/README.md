@@ -13,7 +13,7 @@ afval & grondstoffen, bouwkunde / civiele techniek.
 
 **Voorkeur** – Noord-Holland en omstreken; zowel vast als interim/zzp.
 
-**Doelopdrachtgevers (hebben voorrang)** – Waternet, Oasen, HVC, WarmtelinQ (Gasunie).
+**Doelopdrachtgevers (hebben voorrang)** – Waternet, Oasen, HVC, WarmtelinQ (Gasunie), Alliander / Liander.
 Hun vacatures en inhuuropdrachten staan bovenaan de lijst, ook als ze buiten Noord-Holland vallen.
 
 ## Bronnen
@@ -23,6 +23,7 @@ Hun vacatures en inhuuropdrachten staan bovenaan de lijst, ook als ze buiten Noo
 | HVC | Vaste banen | werkenbijhvc.nl (vacatures-energie, vacatures-duurzaamheid, techniek) |
 | Waternet | Vast + inhuur | waternet.nl/werken-bij; inhuur via mipublic.nl/opdrachtgevers/stichting-waternet, overheidzzp.nl, freep.nl |
 | Oasen | Vaste banen | werkenbijoasen.nl, oasen.easycruit.com |
+| Alliander / Liander | Vast + inhuur | werkenbij.alliander.com (o.a. /projectmanagers/), overheidzzp.nl/inhurende-organisaties/alliander, bijoranje.nl |
 | WarmtelinQ (Gasunie) | Vast + inhuur | werkenbijgasunie.nl, freelance.nl, overheidzzp.nl (zoekterm "WarmtelinQ") |
 | Freep | Interim-/zzp-inhuur bij overheid | freep.nl/opdracht/… categorieën Energie, Afval & Grondstoffen, Bouwkunde/Civiele techniek |
 | Overig (optioneel) | Aanvulling | flexspot.io, depubliekepartner.nl, watertalent.nl |
