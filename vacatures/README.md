@@ -29,6 +29,8 @@ Hun vacatures en inhuuropdrachten staan bovenaan de lijst, ook als ze buiten Noo
 | Freep | Interim-/zzp-inhuur bij overheid | freep.nl/opdracht/… categorieën Energie, Afval & Grondstoffen, Bouwkunde/Civiele techniek |
 | Overig (optioneel) | Aanvulling | flexspot.io, depubliekepartner.nl, watertalent.nl |
 
+Zie ook [salarisvergelijking.md](salarisvergelijking.md) voor cao's en schalen per werkgever.
+
 ## Werkwijze
 
 1. Begin van de maand wordt een nieuw bestand `JJJJ-MM.md` gemaakt (geplande taak).
