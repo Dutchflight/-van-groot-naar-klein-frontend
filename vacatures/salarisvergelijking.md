@@ -10,7 +10,7 @@ Stand 01-11-2026. Bruto per maand, fulltime. Omgerekend naar 36 uur in de laatst
 | Waterschap / Waternet | cao Waterschappen | 36 u | IKB 21% (incl. vakantiegeld) |
 | Drinkwater (Oasen e.a.) | cao Waterbedrijven | 36 u (niet geverifieerd) | FAB ca. 22% (incl. 8,2% vakantiegeld, 2,5% eindejaars) |
 | Alliander / Liander | cao Netwerkbedrijven + bedrijfs-cao Alliander | 40 u | IKB 18% (8% vakantiegeld, 5,2% ADV, 4,8% overig), eindejaarsuitkering 6%, DI-budget € 700 |
-| Stedin | cao Netwerkbedrijven + bedrijfs-cao Stedin | 38/40 u | idem cao NWb (18% PB, eindejaars ≥ 3,7%) |
+| Stedin | cao Netwerkbedrijven + bedrijfs-cao Stedin | 40 u | persoonlijk budget 24% (incl. 8% vakantiegeld), ABP-pensioen (Stedin betaalt 70% premie), 24,5 vakantiedagen |
 
 (*) In de cao GEO staan NV HVC (deel Proces) en HVC Grondstoffen NV (deel Services) met de aantekening
 "decentrale afspraken i.v.m. toetreding tot sector-CAO". De hogere HVC-functies (€ 5.359 – 8.000 en € 6.387 – 9.825)
@@ -37,3 +37,16 @@ Inclusief extra's (18% IKB + 6% eindejaars) is Alliander per jaar duidelijk de h
 
 Bronnen: cao GEO Proces 2024–2026 en onderhandelingsresultaat 2026–2028 (wenb.nl), cao Netwerkbedrijven 2025–2026,
 vacatureteksten werkenbij.alliander.com en werkenbijhvc.nl (01-11-2026), FNV (cao Waterschappen), WWb (cao Waterbedrijven).
+
+## Stedin – schalen per 1 juli 2026 (40 u)
+
+| Schaal | Bedrag | ≈ 36 u | Voorbeeld (Delft) |
+|---|---|---|---|
+| C07 | € 4.045,17 – 5.622,62 | € 3.641 – 5.060 | Werkverantwoordelijke gas / elektra |
+| C08 | € 4.548,05 – 6.331,70 | € 4.093 – 5.699 | – |
+| C09 | € 5.208,56 – 7.267,09 | € 4.688 – 6.540 | Projectleider Large Connections, business controller |
+| C10 | € 6.078,62 – 8.500,89 | € 5.471 – 7.651 | – |
+| boven C10 | F-schalen (functiecontract) | | management |
+
+Stedin C09 ≈ Alliander schaal 10 ≈ waterschap schaal 12 ≈ HVC-band € 5.359 – 8.000.
+Bron: salaristabel Stedin 01-07-2026 / bedrijfs-cao Stedin 2025–2026; bedragen bevestigd in vacatureteksten werkenbij.stedin.net.

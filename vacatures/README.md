@@ -11,7 +11,8 @@ en technische rollen (engineer, netarchitect, adviseur, toezichthouder).
 **Domeinen** – energie (warmtenetten, energietransitie, zon, energie-infrastructuur),
 afval & grondstoffen, bouwkunde / civiele techniek.
 
-**Voorkeur** – Noord-Holland en omstreken; zowel vast als interim/zzp.
+**Voorkeur** – Noord-Holland en omstreken, en **Delft** (goede reistijd; o.a. Stedin); zowel vast als interim/zzp.
+Vacatures in Delft krijgen in de lijst een 📍.
 
 **Doelopdrachtgevers (hebben voorrang)** – Waternet, Oasen, HVC, WarmtelinQ (Gasunie), Alliander / Liander, Stedin.
 Hun vacatures en inhuuropdrachten staan bovenaan de lijst, ook als ze buiten Noord-Holland vallen.
@@ -24,7 +25,7 @@ Hun vacatures en inhuuropdrachten staan bovenaan de lijst, ook als ze buiten Noo
 | Waternet | Vast + inhuur | waternet.nl/werken-bij; inhuur via mipublic.nl/opdrachtgevers/stichting-waternet, overheidzzp.nl, freep.nl |
 | Oasen | Vaste banen | werkenbijoasen.nl, oasen.easycruit.com |
 | Alliander / Liander | Vast + inhuur | werkenbij.alliander.com (o.a. /projectmanagers/), overheidzzp.nl/inhurende-organisaties/alliander, bijoranje.nl |
-| Stedin | Vast + inhuur | werkenbij.stedin.net (vakgebied projectmanagement/projectleiding), freep.nl, opdrachtoverheid.nl/organisaties/stedin-netbeheer-b-v. Let op: sommige Stedin-opdrachten staan géén zzp toe (Wet DBA) |
+| Stedin | Vast + inhuur | werkenbij.stedin.net – Delft: /plaats/banen-in-delft-zuid-holland-nederland/3297/2750405-2743698-2757345/4 (vakgebied projectmanagement/projectleiding), freep.nl, opdrachtoverheid.nl/organisaties/stedin-netbeheer-b-v. Let op: sommige Stedin-opdrachten staan géén zzp toe (Wet DBA) |
 | WarmtelinQ (Gasunie) | Vast + inhuur | werkenbijgasunie.nl, freelance.nl, overheidzzp.nl (zoekterm "WarmtelinQ") |
 | Freep | Interim-/zzp-inhuur bij overheid | freep.nl/opdracht/… categorieën Energie, Afval & Grondstoffen, Bouwkunde/Civiele techniek |
 | Overig (optioneel) | Aanvulling | flexspot.io, depubliekepartner.nl, watertalent.nl |
