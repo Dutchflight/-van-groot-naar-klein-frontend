@@ -20,7 +20,7 @@ Hun vacatures en inhuuropdrachten staan bovenaan de lijst, ook als ze buiten Noo
 
 | Bron | Wat | Waar zoeken |
 |---|---|---|
-| HVC | Vaste banen | werkenbijhvc.nl (vacatures-energie, vacatures-duurzaamheid, techniek) |
+| HVC | Vaste banen | werkenbijhvc.nl. Volledige lijst: `https://www.werkenbijhvc.nl/sitemap.xml` (alle `/vacatures/…`-URL's); details per vacature als JSON via `https://www.werkenbijhvc.nl/router/translate-path?path=/vacatures/<slug>` (titel, plaats, salaris, vakgebied, publicatiedatum) |
 | Waternet | Vast + inhuur | waternet.nl/werken-bij; inhuur via mipublic.nl/opdrachtgevers/stichting-waternet, overheidzzp.nl, freep.nl |
 | Oasen | Vaste banen | werkenbijoasen.nl, oasen.easycruit.com |
 | Alliander / Liander | Vast + inhuur | werkenbij.alliander.com (o.a. /projectmanagers/), overheidzzp.nl/inhurende-organisaties/alliander, bijoranje.nl |
@@ -36,5 +36,6 @@ Hun vacatures en inhuuropdrachten staan bovenaan de lijst, ook als ze buiten Noo
 3. Jij controleert de lijst: zet in de kolom **Oordeel** een `✅` (interessant), `❌` (niet) of `❓` (twijfel).
 4. Opdrachten waarvan de einddatum al voorbij is, gaan naar het kopje *Verlopen / ter info*.
 
-> Let op: de lijst wordt via webzoeken samengesteld. Publicatiedatums van zoekresultaten
+> De sites van de opdrachtgevers zijn sinds 01-11-2026 rechtstreeks bereikbaar; controleer vacatures daar direct.
+> Webzoeken is aanvulling. Publicatiedatums van zoekresultaten
 > lopen soms achter; controleer altijd de vacature zelf voordat je reageert.
