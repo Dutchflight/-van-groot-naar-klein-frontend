@@ -12,9 +12,9 @@ en technische rollen (engineer, netarchitect, adviseur, toezichthouder).
 afval & grondstoffen, bouwkunde / civiele techniek.
 
 **Voorkeur** – Noord-Holland en omstreken, en **Delft** (goede reistijd; o.a. Stedin); zowel vast als interim/zzp.
-Vacatures in Delft krijgen in de lijst een 📍.
+Vacatures in Delft krijgen in de lijst een 📍. **Goes** wordt niet opgenomen.
 
-**Stedin: alle vacatures in schaal C09 en C10** (€ 5.208 – 8.501 bij 40 uur) worden gemeld, ongeacht functie of plaats.
+**Stedin: alle vacatures in schaal C09 en C10** (€ 5.208 – 8.501 bij 40 uur) worden gemeld, ongeacht functie of plaats – behalve **Goes** (uitgesloten).
 Controle: `python3 vacatures/tools/stedin_schalen.py` (leest werkenbij.stedin.net en leidt de schaal af uit het salaris).
 
 **Doelopdrachtgevers (hebben voorrang)** – Waternet, Oasen, HVC, WarmtelinQ (Gasunie), Alliander / Liander, Stedin.
