@@ -35,6 +35,14 @@ Hun vacatures en inhuuropdrachten staan bovenaan de lijst, ook als ze buiten Noo
 
 Zie ook [salarisvergelijking.md](salarisvergelijking.md) voor cao's en schalen per werkgever.
 
+## Drukte per week
+
+Dashboard: https://claude.ai/artifact/J5ZGS75WdjnQ4hBe7yoaAt (staafgrafiek nieuwe vacatures per week, Alliander/HVC/Stedin).
+Data: `vacatures/data/vacatures-per-week.csv` (werkgever, gepubliceerd, ISO-week, titel, niveau). Publicatiedatums komen uit
+Alliander `vacancy.publicationDate` (vacaturepagina's uit werkenbij.alliander.com/sitemap.xml), HVC `field_publication_date`
+(translate-path JSON) en Stedin `datePosted` (JSON-LD op de vacaturepagina's). Elke maandag aanvullen: nieuwe rijen toevoegen,
+bestaande houden, zodat ook gesloten vacatures in de telling blijven.
+
 ## Werkwijze
 
 1. Begin van de maand wordt een nieuw bestand `JJJJ-MM.md` gemaakt (geplande taak).
