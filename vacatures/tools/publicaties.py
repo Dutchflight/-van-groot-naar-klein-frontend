@@ -19,7 +19,7 @@ import waterschappen  # noqa: E402
 CSV = "vacatures/data/vacatures-per-week.csv"
 PASSEND = re.compile(r"project ?leider|project ?manager|programma ?manager|manager .*(realisatie|project)", re.I)
 WATERSCHAPPEN = ("Delfland", "Rijnland", "Waternet")
-VELDEN = ["werkgever", "gepubliceerd", "week", "titel", "niveau", "schaal"]
+VELDEN = ["werkgever", "gepubliceerd", "week", "titel", "niveau", "schaal", "link"]
 
 
 def niveau(werkgever, titel, schaal):
@@ -43,7 +43,7 @@ def alliander():
         d = re.search(r'"vacancy.publicationDate":"([\d-]+)', t)
         if d:
             slug = re.search(r"/vacatures/([^/]+)/jr\d+", u, re.I).group(1)
-            return "Alliander", d.group(1), slug.replace("-", " ").capitalize()
+            return "Alliander", d.group(1), slug.replace("-", " ").capitalize(), u
 
     with ThreadPoolExecutor(8) as ex:
         return [r for r in ex.map(one, urls) if r]
@@ -57,7 +57,7 @@ def hvc():
         e = json.loads(get("https://www.werkenbijhvc.nl/router/translate-path?path=/vacatures/" + s))["entity"]["entity"]
         pd = e.get("field_publication_date") or []
         if pd:
-            return "HVC", pd[0]["value"], e["title"][0]["value"]
+            return "HVC", pd[0]["value"], e["title"][0]["value"], "https://www.werkenbijhvc.nl/vacatures/" + s
 
     with ThreadPoolExecutor(8) as ex:
         return [r for r in ex.map(one, slugs) if r]
@@ -75,7 +75,7 @@ def stedin():
         d = re.search(r'"datePosted":"([\d-]+)"', t)
         titel = re.search(r'"title":"([^"]+)"', t)
         if d:
-            return "Stedin", d.group(1), html.unescape(titel.group(1)) if titel else link
+            return "Stedin", d.group(1), html.unescape(titel.group(1)) if titel else link, stedin_schalen.BASE + link
 
     with ThreadPoolExecutor(8) as ex:
         return [r for r in ex.map(one, sorted(links)) if r]
@@ -85,19 +85,20 @@ if __name__ == "__main__":
     rows = list(csv.DictReader(open(CSV)))
     for r in rows:
         r.setdefault("schaal", "")
+        r.setdefault("link", "")
     # dezelfde werkgever + titel binnen 60 dagen geldt als herplaatsing, niet als nieuwe vacature
     eerder = {}
     for r in rows:
         d = datetime.date.fromisoformat(r["gepubliceerd"]) if r["gepubliceerd"] else None
         eerder.setdefault((r["werkgever"], r["titel"].lower()), []).append(d)
     vandaag = datetime.date.today()
-    gevonden = [(w, d, t, "") for w, d, t in alliander() + hvc() + stedin()]
-    for w, t, sch, start, _sluit, _url in waterschappen.vacatures():
+    gevonden = [(w, d, t, "", u) for w, d, t, u in alliander() + hvc() + stedin()]
+    for w, t, sch, start, _sluit, url in waterschappen.vacatures():
         if "stagiair" in t.lower() or "stage" in t.lower():
             continue
-        gevonden.append((w, start, t, sch))
+        gevonden.append((w, start, t, sch, url))
     nieuw = []
-    for werkgever, datum, titel, sch in gevonden:
+    for werkgever, datum, titel, sch, url in gevonden:
         titel = titel.replace(" | Werken bij Alliander", "").strip()
         datums = eerder.setdefault((werkgever, titel.lower()), [])
         if not datum:
@@ -112,7 +113,7 @@ if __name__ == "__main__":
         datums.append(d)
         week = d.isocalendar()[1] if d else ""
         nieuw.append({"werkgever": werkgever, "gepubliceerd": datum, "week": week, "titel": titel,
-                      "niveau": niveau(werkgever, titel, sch), "schaal": sch})
+                      "niveau": niveau(werkgever, titel, sch), "schaal": sch, "link": url})
     rows += nieuw
     rows.sort(key=lambda r: r["gepubliceerd"] or "0")
     with open(CSV, "w", newline="") as fh:
