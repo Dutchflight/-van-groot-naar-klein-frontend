@@ -42,6 +42,7 @@ Data: `vacatures/data/vacatures-per-week.csv` (werkgever, gepubliceerd, ISO-week
 Alliander `vacancy.publicationDate` (vacaturepagina's uit werkenbij.alliander.com/sitemap.xml), HVC `field_publication_date`
 (translate-path JSON) en Stedin `datePosted` (JSON-LD op de vacaturepagina's). Elke maandag aanvullen: nieuwe rijen toevoegen,
 bestaande houden, zodat ook gesloten vacatures in de telling blijven.
+Automatisch: `python3 vacatures/tools/publicaties.py` (dezelfde titel bij dezelfde werkgever binnen 60 dagen telt als herplaatsing).
 
 ## Werkwijze
 
