@@ -8,7 +8,7 @@ Stand 01-11-2026. Bruto per maand, fulltime. Omgerekend naar 36 uur in de laatst
 |---|---|---|---|
 | HVC | cao GEO (Grondstoffen, Energie en Omgeving), met eigen decentrale afspraken (*) | 38 u kantoor/techniek, 40 u uitvoerend | vakantie-uitkering 8% (via PAB), eindejaarsuitkering 5,5%, eventueel collectieve resultaatdeling |
 | Waterschap / Waternet | cao Waterschappen | 36 u | IKB 21% (incl. vakantiegeld) |
-| Drinkwater (Oasen e.a.) | cao Waterbedrijven | 36 u (niet geverifieerd) | FAB ca. 22% (incl. 8,2% vakantiegeld, 2,5% eindejaars) |
+| Drinkwater (Oasen e.a.) | cao Waterbedrijven | **40 u** (art. 3.1) | FAB ca. 14% vanaf 2026: 8,2% vakantiegeld, 2,5% eindejaars, 2,51% duurzame inzetbaarheid, 0,68% diensttijd, 0,1% bijzonder verlof (de 6,62% vakantiedagen zit sinds 1-1-2026 in het salaris) |
 | Alliander / Liander | cao Netwerkbedrijven + bedrijfs-cao Alliander | 40 u | IKB 18% (8% vakantiegeld, 5,2% ADV, 4,8% overig), eindejaarsuitkering 6%, DI-budget € 700 |
 | Stedin | cao Netwerkbedrijven + bedrijfs-cao Stedin | 40 u | persoonlijk budget 24% (incl. 8% vakantiegeld), ABP-pensioen (Stedin betaalt 70% premie), 24,5 vakantiedagen |
 
@@ -50,3 +50,17 @@ vacatureteksten werkenbij.alliander.com en werkenbijhvc.nl (01-11-2026), FNV (ca
 
 Stedin C09 ≈ Alliander schaal 10 ≈ waterschap schaal 12 ≈ HVC-band € 5.359 – 8.000.
 Bron: salaristabel Stedin 01-07-2026 / bedrijfs-cao Stedin 2025–2026; bedragen bevestigd in vacatureteksten werkenbij.stedin.net.
+
+## Cao Waterbedrijven – officiële tabel per 1 juli 2026 (40 u)
+
+| Groep | Bedrag | ≈ Stedin | ≈ Alliander |
+|---|---|---|---|
+| 10 (J) | € 4.238 – 5.877 | C07/C08 | schaal 9 |
+| 11 (K) | € 4.780 – 6.635 | C08 | schaal 9/10 |
+| 12 (L) | € 5.402 – 7.507 | **C09** (€ 5.209 – 7.267) | schaal 10 |
+| 13 (M) | € 6.410 – 8.916 | **C10** (€ 6.079 – 8.501) | schaal 11 |
+| boven 13 | in overleg | F-schalen | schaal 12 |
+
+Per jaar (12 × maand + budget): Stedin C09 ≈ € 77.500 – 108.100 (24%); Waterbedrijven L ≈ € 73.900 – 102.700 (≈14%).
+Correctie: eerder stond hier dat de cao Waterbedrijven 36 uur rekent; dat is 40 uur.
+Bron: cao Waterbedrijven 1-7-2025 t/m 30-6-2027, bijlage 1.1 en art. 3.1 / 4.9 (fnv.nl).
