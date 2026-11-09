@@ -83,3 +83,13 @@ Percentages voor het niveau van Stedin C09 / Waterbedrijven groep 12 (bedragen o
 
 Bronnen: cao Waterbedrijven 2025–2027 (bijlage 1.1), FNV/CNV/Flexupdate (cao-akkoorden), CBS via NOS (cao-lonen en inflatie).
 Stedin volgt voor de loonsverhogingen de cao Netwerkbedrijven; de schalen staan in de bedrijfs-cao.
+
+## Prognose cao-verhoging 2027 (eigen inschatting, 9-11-2026)
+
+Uitgangspunten: CPB (MEV 2027) verwacht inflatie 2,7% en cao-lonen 3,8% (markt) / 3,4% (overheid) in 2027.
+
+| Cao | Wat er ligt | Laag | **Verwacht** | Hoog | Toelichting |
+|---|---|---|---|---|---|
+| Netwerkbedrijven (Stedin, Alliander) | Bod werkgevers: 2,5% per 1-1-2027 + € 600 eenmalig, 1,5% + 1,5% in 2028. Eis CNV 5,5% per 1-1-2027 | 2,5% | **≈ 3,0–3,5%** + eenmalig | 4,0% | Eerste bod 2%/jaar → 2,5%; uitkomst meestal tussen bod en eis, rond CPB-markt (3,8%) |
+| Waterschappen (Waternet) | Eis FNV 5,5% + € 80, CNV 5,5%; werkgevers nog geen bod ("zitten al aan de bovenkant") | 2,75% | **≈ 3,25–3,75%** | 4,5% | Bonden willen 1 jaar; CPB overheid 3,4% |
+| Waterbedrijven (Oasen, Evides, PWN, Vitens…) | 1,2% per 1-1-2027 vastgelegd; cao loopt tot 1-7-2027 | 1,2% + 2,0% | **1,2% + ≈ 2,5% per 1-7-2027** | 1,2% + 3,0% | Nieuwe cao vanaf juli; jaargemiddeld ≈ 2,5%, niveau eind 2027 ≈ +3,7% |
