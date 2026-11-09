@@ -93,3 +93,13 @@ Uitgangspunten: CPB (MEV 2027) verwacht inflatie 2,7% en cao-lonen 3,8% (markt) 
 | Netwerkbedrijven (Stedin, Alliander) | Bod werkgevers: 2,5% per 1-1-2027 + € 600 eenmalig, 1,5% + 1,5% in 2028. Eis CNV 5,5% per 1-1-2027 | 2,5% | **≈ 3,0–3,5%** + eenmalig | 4,0% | Eerste bod 2%/jaar → 2,5%; uitkomst meestal tussen bod en eis, rond CPB-markt (3,8%) |
 | Waterschappen (Waternet) | Eis FNV 5,5% + € 80, CNV 5,5%; werkgevers nog geen bod ("zitten al aan de bovenkant") | 2,75% | **≈ 3,25–3,75%** | 4,5% | Bonden willen 1 jaar; CPB overheid 3,4% |
 | Waterbedrijven (Oasen, Evides, PWN, Vitens…) | 1,2% per 1-1-2027 vastgelegd; cao loopt tot 1-7-2027 | 1,2% | **1,2%; volgende structurele stap pas per 1-1-2028** (verwachting gebruiker), eventueel met eenmalige uitkering of terugwerkende kracht over 2e helft 2027 | 1,2% + ≈ 2,5% per 1-7-2027 | Cao blijft na 1-7-2027 gelden tot er een nieuwe is; eerdere cao's sloten soms naadloos aan (2023, 2025) |
+
+## Waterschap schaal 12/13 tegen Stedin C09 (per 1-7-2026)
+
+| | Werkweek | Per maand | Budget | Per jaar (12 × maand + budget) | Per uur incl. budget (max) |
+|---|---|---|---|---|---|
+| Stedin C09 | 40 u | € 5.209 – 7.267 | 24% | € 77.500 – 108.100 | ≈ € 52 |
+| Waterschap schaal 12 | 36 u | € 5.303 – 7.417 | 21% IKB | € 77.000 – 107.700 | ≈ € 57,50 |
+| Waterschap schaal 13 | 36 u | € 5.885 – 8.363 | 21% IKB | € 85.500 – 121.400 | ≈ € 65 |
+
+Bron: FNV, salarisschalen cao Werken voor waterschappen 2025–2026 (bedragen per 1-7-2026, 36 uur, IKB 21%, +2,5% groei per 1 januari binnen de schaal).
