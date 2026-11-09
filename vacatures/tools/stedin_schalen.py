@@ -12,8 +12,9 @@ LIST = BASE + "/plaats/banen-in-nederland/3297/2750405/2"
 # schaal: (minimum, maximum) per 1-7-2026, 40 uur
 SCHALEN = {"C07": (4045, 5622), "C08": (4548, 6331), "C09": (5208, 7267), "C10": (6078, 8500)}
 WATCH = ("C09", "C10")
-# locaties die de gebruiker niet wil zien
-UITGESLOTEN = ("goes",)
+# regio van de gebruiker: Zuid-Holland (+ Amsterdam); andere Stedin-plaatsen (Utrecht, Goes, Dokkum...) vallen af
+REGIO = ("delft", "rotterdam", "den-haag", "rijswijk", "leiden", "zoetermeer", "dordrecht", "gouda", "heinenoord",
+         "schiedam", "zwijndrecht", "amsterdam")
 
 
 def get(url):
@@ -61,5 +62,5 @@ def vacatures():
 
 if __name__ == "__main__":
     for sch, naam, plaats, sluit, url in vacatures():
-        if sch in WATCH and plaats not in UITGESLOTEN:
+        if sch in WATCH and plaats in REGIO:
             print(f"{sch} | {naam} | {plaats} | sluit {sluit} | {url}")

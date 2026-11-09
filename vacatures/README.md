@@ -11,11 +11,13 @@ en technische rollen (engineer, netarchitect, adviseur, toezichthouder).
 **Domeinen** – energie (warmtenetten, energietransitie, zon, energie-infrastructuur),
 afval & grondstoffen, bouwkunde / civiele techniek.
 
-**Voorkeur** – Noord-Holland en omstreken, en **Delft** (goede reistijd; o.a. Stedin); zowel vast als interim/zzp.
+**Regio** – **Zuid-Holland + Amsterdam** (o.a. Delft, Rotterdam, Den Haag, Rijswijk, Leiden, Gouda, Dordrecht). Niet: Arnhem, Duiven, Almere, Utrecht, Goes, Friesland e.d. Zowel vast als interim/zzp.
 Vacatures in Delft krijgen in de lijst een 📍. **Goes** wordt niet opgenomen.
 
 **Stedin: alle vacatures in schaal C09 en C10** (€ 5.208 – 8.501 bij 40 uur) worden gemeld, ongeacht functie of plaats – behalve **Goes** (uitgesloten).
 Controle: `python3 vacatures/tools/stedin_schalen.py` (leest werkenbij.stedin.net en leidt de schaal af uit het salaris).
+
+**Drinkwater Evides en Oasen:** projectleider- en projectmanagerfuncties in de regio. Controle: `python3 vacatures/tools/drinkwater.py` (Evides met publicatiedatum en groep uit het maximumsalaris; Oasen met schaal uit de tekst).
 
 **Waterschappen Delfland, Rijnland en Waternet: projectleider- en projectmanagerfuncties in schaal 12 en 13** worden gemeld. Geen afdelingsmanagers, adviseurs of andere functies, ook niet in schaal 13.
 Controle: `python3 vacatures/tools/waterschappen.py` (schaal uit de vacaturetekst; Delfland met publicatiedatum; `alle` toont elke vacature).

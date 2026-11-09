@@ -15,6 +15,15 @@ WATCH = ("12", "13")
 PROJECT = re.compile(r"project ?leider|project ?manager|programma ?manager|manager .*(realisatie|project)", re.I)
 
 
+def veilig(fn):
+    def wrapper(*args):
+        try:
+            return fn(*args)
+        except Exception:  # vacature net offline of site antwoordt even niet
+            return None
+    return wrapper
+
+
 def get(url):
     req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
     return urllib.request.urlopen(req, timeout=30).read().decode("utf-8", "ignore")
@@ -41,6 +50,7 @@ def delfland():
     links = sorted(set(re.findall(r'href="((?:https://www.hhdelfland.nl)?/werken-bij-delfland/vacatures/[^"#?]+/)"',
                                   get(base + "/werken-bij-delfland/vacatures/"))))
 
+    @veilig
     def one(link):
         url = link if link.startswith("http") else base + link
         p = get(url)
@@ -48,7 +58,7 @@ def delfland():
         return ("Delfland", titel(p), schaal(text(p)), per.group(1) if per else "", per.group(2) if per else "", url)
 
     with ThreadPoolExecutor(6) as ex:
-        return [r for r in ex.map(one, links) if "stage" not in r[1].lower()]
+        return [r for r in ex.map(one, links) if r and "stage" not in r[1].lower()]
 
 
 def rijnland():
@@ -56,18 +66,20 @@ def rijnland():
     links = sorted(set(re.findall(r'href="(/werken-bij-rijnland/alle-vacatures/\d+-[^"#?]+/)"',
                                   get(base + "/werken-bij-rijnland/alle-vacatures/"))))
 
+    @veilig
     def one(link):
         p = get(base + link)
         return ("Rijnland", titel(p), schaal(text(p)), "", "", base + link)
 
     with ThreadPoolExecutor(6) as ex:
-        return list(ex.map(one, links))
+        return [r for r in ex.map(one, links) if r]
 
 
 def waternet():
     base = "https://www.waternet.nl"
     links = sorted(set(re.findall(r'"Url":"(/werken-bij/vacatures/[^"]+)"', get(base + "/werken-bij/vacatures/"))))
 
+    @veilig
     def one(link):
         p = get(base + link)
         s = text(p)
@@ -76,7 +88,7 @@ def waternet():
                 f"{sluit.group(3)}-{int(sluit.group(2)):02d}-{int(sluit.group(1)):02d}" if sluit else "", base + link)
 
     with ThreadPoolExecutor(6) as ex:
-        return list(ex.map(one, links))
+        return [r for r in ex.map(one, links) if r]
 
 
 def vacatures():
