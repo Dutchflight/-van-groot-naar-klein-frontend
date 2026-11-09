@@ -14,9 +14,18 @@ from concurrent.futures import ThreadPoolExecutor
 
 sys.path.insert(0, __file__.rsplit("/", 1)[0])
 import stedin_schalen  # noqa: E402
+import waterschappen  # noqa: E402
 
 CSV = "vacatures/data/vacatures-per-week.csv"
 PASSEND = re.compile(r"project ?leider|project ?manager|programma ?manager|manager .*(realisatie|project)", re.I)
+WATERSCHAPPEN = ("Delfland", "Rijnland", "Waternet")
+VELDEN = ["werkgever", "gepubliceerd", "week", "titel", "niveau", "schaal"]
+
+
+def niveau(werkgever, titel, schaal):
+    if PASSEND.search(titel) or (werkgever in WATERSCHAPPEN and schaal in ("12", "13")):
+        return "passend"
+    return "overig"
 
 
 def get(url):
@@ -73,27 +82,42 @@ def stedin():
 
 if __name__ == "__main__":
     rows = list(csv.DictReader(open(CSV)))
+    for r in rows:
+        r.setdefault("schaal", "")
     # dezelfde werkgever + titel binnen 60 dagen geldt als herplaatsing, niet als nieuwe vacature
     eerder = {}
     for r in rows:
-        eerder.setdefault((r["werkgever"], r["titel"].lower()), []).append(datetime.date.fromisoformat(r["gepubliceerd"]))
-    nieuw = []
-    for werkgever, datum, titel in alliander() + hvc() + stedin():
-        titel = titel.replace(" | Werken bij Alliander", "").strip()
-        d = datetime.date.fromisoformat(datum)
-        datums = eerder.setdefault((werkgever, titel.lower()), [])
-        if any(abs((d - e).days) <= 60 for e in datums):
+        d = datetime.date.fromisoformat(r["gepubliceerd"]) if r["gepubliceerd"] else None
+        eerder.setdefault((r["werkgever"], r["titel"].lower()), []).append(d)
+    vandaag = datetime.date.today()
+    gevonden = [(w, d, t, "") for w, d, t in alliander() + hvc() + stedin()]
+    for w, t, sch, start, _sluit, _url in waterschappen.vacatures():
+        if "stagiair" in t.lower() or "stage" in t.lower():
             continue
+        gevonden.append((w, start, t, sch))
+    nieuw = []
+    for werkgever, datum, titel, sch in gevonden:
+        titel = titel.replace(" | Werken bij Alliander", "").strip()
+        datums = eerder.setdefault((werkgever, titel.lower()), [])
+        if not datum:
+            # geen publicatiedatum (Rijnland, Waternet): eerste keer gezien telt, behalve bij de nulmeting
+            if datums:
+                continue
+            datum = "" if not rows or not any(r["werkgever"] == werkgever for r in rows) else vandaag.isoformat()
+        d = datetime.date.fromisoformat(datum) if datum else None
+        if d is None or any(e is None or abs((d - e).days) <= 60 for e in datums):
+            if datums or d is not None:
+                continue
         datums.append(d)
-        week = datetime.date.fromisoformat(datum).isocalendar()[1]
+        week = d.isocalendar()[1] if d else ""
         nieuw.append({"werkgever": werkgever, "gepubliceerd": datum, "week": week, "titel": titel,
-                      "niveau": "passend" if PASSEND.search(titel) else "overig"})
+                      "niveau": niveau(werkgever, titel, sch), "schaal": sch})
     rows += nieuw
-    rows.sort(key=lambda r: r["gepubliceerd"])
+    rows.sort(key=lambda r: r["gepubliceerd"] or "0")
     with open(CSV, "w", newline="") as fh:
-        w = csv.DictWriter(fh, fieldnames=["werkgever", "gepubliceerd", "week", "titel", "niveau"])
+        w = csv.DictWriter(fh, fieldnames=VELDEN)
         w.writeheader()
         w.writerows(rows)
     for r in nieuw:
-        print(f"{r['gepubliceerd']} | wk {r['week']} | {r['werkgever']} | {r['titel']} | {r['niveau']}")
+        print(f"{r['gepubliceerd'] or 'nulmeting'} | wk {r['week']} | {r['werkgever']} | {r['titel']} | {r['niveau']}")
     print(f"{len(nieuw)} nieuw, {len(rows)} totaal")

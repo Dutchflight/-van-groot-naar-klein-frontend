@@ -17,6 +17,9 @@ Vacatures in Delft krijgen in de lijst een 📍. **Goes** wordt niet opgenomen.
 **Stedin: alle vacatures in schaal C09 en C10** (€ 5.208 – 8.501 bij 40 uur) worden gemeld, ongeacht functie of plaats – behalve **Goes** (uitgesloten).
 Controle: `python3 vacatures/tools/stedin_schalen.py` (leest werkenbij.stedin.net en leidt de schaal af uit het salaris).
 
+**Waterschappen Delfland, Rijnland en Waternet: alle vacatures in schaal 12 en 13** worden gemeld.
+Controle: `python3 vacatures/tools/waterschappen.py` (schaal uit de vacaturetekst; Delfland met publicatiedatum).
+
 **Referentiefuncties** (geen actie, wel als maatstaf voor nieuwe vacatures; zie ook de maandagcontrole):
 
 | Functie | Werkgever, plaats | Niveau / salaris | Kern | Status |
@@ -46,7 +49,7 @@ Zie ook [salarisvergelijking.md](salarisvergelijking.md) voor cao's en schalen p
 
 ## Drukte per week
 
-Dashboard: https://claude.ai/artifact/J5ZGS75WdjnQ4hBe7yoaAt (staafgrafiek nieuwe vacatures per week, Alliander/HVC/Stedin).
+Dashboard: https://claude.ai/artifact/J5ZGS75WdjnQ4hBe7yoaAt (staafgrafiek nieuwe vacatures per week, Alliander/HVC/Stedin/Delfland/Rijnland/Waternet).
 Data: `vacatures/data/vacatures-per-week.csv` (werkgever, gepubliceerd, ISO-week, titel, niveau). Publicatiedatums komen uit
 Alliander `vacancy.publicationDate` (vacaturepagina's uit werkenbij.alliander.com/sitemap.xml), HVC `field_publication_date`
 (translate-path JSON) en Stedin `datePosted` (JSON-LD op de vacaturepagina's). Elke maandag aanvullen: nieuwe rijen toevoegen,
