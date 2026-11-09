@@ -17,6 +17,8 @@ Vacatures in Delft krijgen in de lijst een 📍. **Goes** wordt niet opgenomen.
 **Stedin: alle vacatures in schaal C09 en C10** (€ 5.208 – 8.501 bij 40 uur) worden gemeld, ongeacht functie of plaats – behalve **Goes** (uitgesloten).
 Controle: `python3 vacatures/tools/stedin_schalen.py` (leest werkenbij.stedin.net en leidt de schaal af uit het salaris).
 
+**HVC: speciaal letten op** projectmanager/projectleider **realisatie warmtenetten** (Naaldwijk/Westland, Rijswijk, Dordrecht). Deze vacature (Naaldwijk, geplaatst ca. 30-07-2026) stond in okt. 2026 en is sinds 1-11-2026 offline.
+
 **Doelopdrachtgevers (hebben voorrang)** – Waternet, Oasen, HVC, WarmtelinQ (Gasunie), Alliander / Liander, Stedin.
 Hun vacatures en inhuuropdrachten staan bovenaan de lijst, ook als ze buiten Noord-Holland vallen.
 
