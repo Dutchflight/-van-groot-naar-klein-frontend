@@ -17,7 +17,14 @@ Vacatures in Delft krijgen in de lijst een 📍. **Goes** wordt niet opgenomen.
 **Stedin: alle vacatures in schaal C09 en C10** (€ 5.208 – 8.501 bij 40 uur) worden gemeld, ongeacht functie of plaats – behalve **Goes** (uitgesloten).
 Controle: `python3 vacatures/tools/stedin_schalen.py` (leest werkenbij.stedin.net en leidt de schaal af uit het salaris).
 
-**HVC: speciaal letten op** projectmanager/projectleider **realisatie warmtenetten** (Naaldwijk/Westland, Rijswijk, Dordrecht). Deze vacature (Naaldwijk, geplaatst ca. 30-07-2026) stond in okt. 2026 en is sinds 1-11-2026 offline.
+**Referentiefuncties** (geen actie, wel als maatstaf voor nieuwe vacatures; zie ook de maandagcontrole):
+
+| Functie | Werkgever, plaats | Niveau / salaris | Kern | Status |
+|---|---|---|---|---|
+| Projectmanager realisatie warmtenetten | HVC, Naaldwijk | n.b. (projectmanager-niveau) | aanleg collectieve warmtenetten Monster/Naaldwijk (Trias Westland) | geplaatst ca. 30-07-2026, offline sinds 1-11-2026 |
+| Manager realisatie warmtenetten | HVC, Rijswijk | € 6.387 – 9.825 (40 u) ≈ Stedin C10+ / Alliander 11–12 / drinkwater 13+ | leiding team ca. 30, realisatie grote warmtenetten (Alkmaar, Dordrecht, Hoorn); 85% uitvoering | offline sinds 1-11-2026 |
+| Projectleider Large Connections | Stedin, Delft | C09: € 5.209 – 7.267 (40 u) + 24% | aansluitingen > 10 MVA, 30–40 projecten | sluit 16-11-2026 |
+
 
 **Doelopdrachtgevers (hebben voorrang)** – Waternet, Oasen, HVC, WarmtelinQ (Gasunie), Alliander / Liander, Stedin.
 Hun vacatures en inhuuropdrachten staan bovenaan de lijst, ook als ze buiten Noord-Holland vallen.
