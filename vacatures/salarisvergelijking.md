@@ -64,3 +64,22 @@ Bron: salaristabel Stedin 01-07-2026 / bedrijfs-cao Stedin 2025–2026; bedragen
 Per jaar (12 × maand + budget): Stedin C09 ≈ € 77.500 – 108.100 (24%); Waterbedrijven L ≈ € 73.900 – 102.700 (≈14%).
 Correctie: eerder stond hier dat de cao Waterbedrijven 36 uur rekent; dat is 40 uur.
 Bron: cao Waterbedrijven 1-7-2025 t/m 30-6-2027, bijlage 1.1 en art. 3.1 / 4.9 (fnv.nl).
+
+## Loonsverhogingen 2021–2026: Stedin (cao Netwerkbedrijven) tegen drinkwater (cao Waterbedrijven)
+
+Percentages voor het niveau van Stedin C09 / Waterbedrijven groep 12 (bedragen omgerekend naar procenten op dat niveau).
+
+| Jaar | Netwerkbedrijven (Stedin) | Waterbedrijven | CBS gem. cao-lonen | Inflatie (CPI) |
+|---|---|---|---|---|
+| 2021 | 2% (+ € 350 eenmalig) | € 75 (≈ 1,3%) | 1,8% | 2,7% |
+| 2022 | 2% (+ € 1.250 eenmalig) | 1,5% (+ € 1.000 eenmalig) | 3,2% | 10,0% |
+| 2023 | 4% | € 281 voor groep 12 (≈ 4,8%) | 6,1% | 3,8% |
+| 2024 | 7% (min. € 275) | 4,25% + € 50 (≈ 5,1%) | 6,6% | ≈ 3,3% |
+| 2025 | 3% jan + 2% jul (≈ 5,1%) | 2,5% jan + 2,5% jul (≈ 5,1%) | 5,0% | ≈ 3,2% |
+| 2026 | 2% jan + 2% jul (≈ 4,0%) | 1,6% jan (incl. FAB) + 2,1% jul (≈ 3,7%) | – | – |
+| **2021–2025** | **≈ +21,6%** | **≈ +18,9%** | ≈ +24,8% | ≈ +25% |
+| **2021–2026** | **≈ +26,5%** | **≈ +23,3%** | | |
+| Afgesproken daarna | onderhandeling cao 2027–2028 loopt (werkgevers bieden 5,5% + € 600 over 24 mnd) | +1,2% per 1-1-2027 | | |
+
+Bronnen: cao Waterbedrijven 2025–2027 (bijlage 1.1), FNV/CNV/Flexupdate (cao-akkoorden), CBS via NOS (cao-lonen en inflatie).
+Stedin volgt voor de loonsverhogingen de cao Netwerkbedrijven; de schalen staan in de bedrijfs-cao.
