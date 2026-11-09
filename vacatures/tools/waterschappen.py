@@ -1,6 +1,6 @@
 """Vacatures bij Delfland, Rijnland en Waternet met schaal, publicatie- en sluitingsdatum.
 
-Gebruik: python3 vacatures/tools/waterschappen.py        (toont schaal 12 en 13)
+Gebruik: python3 vacatures/tools/waterschappen.py        (toont projectleiding in schaal 12 en 13)
          python3 vacatures/tools/waterschappen.py alle   (toont alles)
 Delfland vermeldt een publicatiedatum; Rijnland en Waternet niet (dan leeg).
 """
@@ -11,6 +11,8 @@ import urllib.request
 from concurrent.futures import ThreadPoolExecutor
 
 WATCH = ("12", "13")
+# alleen projectleiding/projectmanagement, geen afdelingsmanagers e.d.
+PROJECT = re.compile(r"project ?leider|project ?manager|programma ?manager|manager .*(realisatie|project)", re.I)
 
 
 def get(url):
@@ -84,5 +86,5 @@ def vacatures():
 if __name__ == "__main__":
     alle = len(sys.argv) > 1 and sys.argv[1] == "alle"
     for werkgever, t, sch, start, sluit, url in vacatures():
-        if alle or sch in WATCH:
+        if alle or (PROJECT.search(t) and sch in WATCH + ("",)):
             print(f"schaal {sch or '?'} | {werkgever} | {t} | geplaatst {start or 'n.b.'} | sluit {sluit or 'n.b.'} | {url}")

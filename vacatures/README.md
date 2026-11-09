@@ -17,8 +17,8 @@ Vacatures in Delft krijgen in de lijst een 📍. **Goes** wordt niet opgenomen.
 **Stedin: alle vacatures in schaal C09 en C10** (€ 5.208 – 8.501 bij 40 uur) worden gemeld, ongeacht functie of plaats – behalve **Goes** (uitgesloten).
 Controle: `python3 vacatures/tools/stedin_schalen.py` (leest werkenbij.stedin.net en leidt de schaal af uit het salaris).
 
-**Waterschappen Delfland, Rijnland en Waternet: alle vacatures in schaal 12 en 13** worden gemeld.
-Controle: `python3 vacatures/tools/waterschappen.py` (schaal uit de vacaturetekst; Delfland met publicatiedatum).
+**Waterschappen Delfland, Rijnland en Waternet: projectleider- en projectmanagerfuncties in schaal 12 en 13** worden gemeld. Geen afdelingsmanagers, adviseurs of andere functies, ook niet in schaal 13.
+Controle: `python3 vacatures/tools/waterschappen.py` (schaal uit de vacaturetekst; Delfland met publicatiedatum; `alle` toont elke vacature).
 
 **Referentiefuncties** (geen actie, wel als maatstaf voor nieuwe vacatures; zie ook de maandagcontrole):
 

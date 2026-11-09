@@ -23,7 +23,8 @@ VELDEN = ["werkgever", "gepubliceerd", "week", "titel", "niveau", "schaal"]
 
 
 def niveau(werkgever, titel, schaal):
-    if PASSEND.search(titel) or (werkgever in WATERSCHAPPEN and schaal in ("12", "13")):
+    # waterschappen: alleen projectleiding in schaal 12/13 (of schaal onbekend); geen afdelingsmanagers
+    if PASSEND.search(titel) and (werkgever not in WATERSCHAPPEN or schaal in ("12", "13", "")):
         return "passend"
     return "overig"
 
