@@ -30,6 +30,7 @@ Controle: `python3 vacatures/tools/waterschappen.py` (schaal uit de vacatureteks
 |---|---|---|---|---|
 | Projectmanager realisatie warmtenetten | HVC, Naaldwijk | n.b. (projectmanager-niveau) | aanleg collectieve warmtenetten Monster/Naaldwijk (Trias Westland) | geplaatst ca. 30-07-2026, offline sinds 1-11-2026 |
 | Manager realisatie warmtenetten | HVC, Rijswijk | € 6.387 – 9.825 (40 u) ≈ Stedin C10+ / Alliander 11–12 / drinkwater 13+ | leiding team ca. 30, realisatie grote warmtenetten (Alkmaar, Dordrecht, Hoorn); 85% uitvoering | offline sinds 1-11-2026 |
+| Projectleider / Project Manager Nieuwbouwstations Zuid-West / Project Manager West Noord | TenneT, Gouda | TenneT-schaal, indicatie € 4.816 – 9.472 (40 u) | hoogspanningsstations en netuitbreiding West-Nederland; min. 10 jr ervaring, 5 jr leiding infraprojecten | eerder geplaatst (o.a. feb. 2025, sept./okt. 2026); op 10-11-2026 niet meer online |
 | Projectleider Large Connections | Stedin, Delft | C09: € 5.209 – 7.267 (40 u) + 24% | aansluitingen > 10 MVA, 30–40 projecten | sluit 16-11-2026 |
 
 
