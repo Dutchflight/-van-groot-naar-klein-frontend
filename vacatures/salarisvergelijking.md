@@ -103,3 +103,22 @@ Uitgangspunten: CPB (MEV 2027) verwacht inflatie 2,7% en cao-lonen 3,8% (markt) 
 | Waterschap schaal 13 | 36 u | € 5.885 – 8.363 | 21% IKB | € 85.500 – 121.400 | ≈ € 65 |
 
 Bron: FNV, salarisschalen cao Werken voor waterschappen 2025–2026 (bedragen per 1-7-2026, 36 uur, IKB 21%, +2,5% groei per 1 januari binnen de schaal).
+
+## Netto: loondienst tegen zzp (grove schatting 2026, `vacatures/tools/netto_model.py`)
+
+Netto = besteedbaar per jaar, na belasting en na de eigen pensioeninleg. Pensioen = totale jaarlijkse inleg (werkgever + werknemer, of zelf bij zzp).
+
+| Situatie | Bruto / omzet | Pensioeninleg | Netto per jaar | Netto per maand |
+|---|---|---|---|---|
+| Stedin C09 midden | € 92.800 | € 16.700 | € 57.000 | € 4.750 |
+| Stedin C09 max | € 108.100 | € 20.300 | € 63.200 | € 5.270 |
+| Alliander schaal 10 max | € 115.100 | € 23.500 | € 65.800 | € 5.490 |
+| Waterschap 13 max (36 u) | € 121.400 | € 24.100 | € 68.500 | € 5.710 |
+| Zzp € 105 × 32 u, 44 wk | € 147.800 | € 20.000 | € 73.800 | € 6.150 |
+| Zzp € 130 × 32 u, 44 wk | € 183.000 | € 20.000 | € 93.700 | € 7.810 |
+| Zzp € 130 × 32 u, 36 wk (gaten) | € 149.800 | € 20.000 | € 74.900 | € 6.240 |
+| Zzp € 130 × 32 u, 30 wk | € 124.800 | € 20.000 | € 61.400 | € 5.110 |
+| Zzp € 135 × 36 u, 44 wk | € 213.800 | € 20.000 | € 111.200 | € 9.270 |
+
+Aannames zzp: € 6.000 zakelijke kosten, € 6.500 AOV, € 20.000 lijfrente (aftrekbaar), zelfstandigenaftrek € 1.200, MKB-winstvrijstelling 12,7%, Zvw 5,26%.
+Geen WW, geen doorbetaling bij ziekte (AOV dekt deels), geen betaald verlof; Wet DBA kan zzp bij sommige opdrachtgevers uitsluiten.
