@@ -20,6 +20,8 @@ Controle: `python3 vacatures/tools/stedin_schalen.py` (leest werkenbij.stedin.ne
 **Freep (interim/zzp):** projectleiding in Zuid-Holland en Amsterdam, vooral infra, openbare ruimte, gebiedsontwikkeling, energie en water. Controle: `python3 vacatures/tools/freep.py` (`breed` voor alle projectleiding).
 Voorkeur: veel vrijheid, aan opdrachtgeverszijde, grote eigen verantwoordelijkheid, klein team.
 
+**Zzp-opdrachten bijhouden:** `python3 vacatures/tools/zzp.py` voegt Freep, MiPublic en De Publieke Partner samen in `vacatures/data/zzp-opdrachten.csv` (één rij per opdracht, met week, maand, uren, maximumtarief, sluitingsdatum, platforms en link). Staat ook in het dashboard, sectie 'Zzp- en interimopdrachten per week'.
+
 **Andere zzp-platforms:** MiPublic (`python3 vacatures/tools/mipublic.py`, met sluitingsdatum en tarief), De Publieke Partner (dagelijkse lijst op depubliekepartner.nl/nieuwste-opdrachten, veel detachering). Niet automatisch: overheidzzp.nl (blokkeert), Striive en Flexspot (alleen met account/JavaScript).
 
 **TenneT:** alleen standplaats **Gouda** (hoofdkantoor Arnhem, ca. 1× per week). Controle: `python3 vacatures/tools/tennet.py`.
