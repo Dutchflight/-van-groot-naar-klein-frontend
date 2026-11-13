@@ -1,7 +1,7 @@
 """Houdt zzp/interim-opdrachten bij van Freep, MiPublic en De Publieke Partner.
 
 Gebruik: python3 vacatures/tools/zzp.py
-Schrijft vacatures/data/zzp-opdrachten.csv bij: projectleiding in Zuid-Holland en Amsterdam, één rij per opdracht
+Schrijft vacatures/data/zzp-opdrachten.csv bij: projectleiding in civiel/infra/ruimte/energie/water in Zuid-Holland en Amsterdam, één rij per opdracht
 (dezelfde opdracht op meerdere platforms telt één keer). Oude rijen blijven staan, zodat de telling per week klopt.
 """
 import csv
@@ -22,11 +22,23 @@ VELDEN = ["sleutel", "opdracht", "opdrachtgever", "plaats", "uren", "tarief", "c
           "sluit", "domein", "platforms", "link", "link_freep", "link_mipublic", "link_dpp"]
 
 
-NIET = re.compile(r"ondersteun|\bpmo\b|assistent|secretar|co[öo]rdinator|officer", re.I)
+NIET = re.compile(r"ondersteun|\bpmo\b|assistent|secretar|co[öo]rdin|officer|\bict\b|\bit\b|informatie|digital|\bai\b|"
+                  r"data|huisvesting|vastgoed|facilit|sourcing|portal|jeugd|zorg|onderwijs", re.I)
 
 
-def relevant(titel):
-    return bool(freep.ROL.search(titel)) and not NIET.search(titel)
+# alleen het vakgebied van de gebruiker: civiel, infra, openbare ruimte, gebiedsontwikkeling, energie/warmte, water
+VAKGEBIED = re.compile(r"civiel(?!e?\s*recht)|civieltechn|kunstwerk|infra|openbare ruimte|buitenruimte|wegen|brug|riool|"
+                       r"water|dijk|kade|gebiedsontwikkel|deelgebied|ruimtelijk|energie|warmte|netbeheer|netcongestie|natuur|tractie|spoor", re.I)
+# opdrachtgevers die Freep onder Zuid-Holland zet maar buiten de regio liggen
+BUITEN = re.compile(r"vijfheerenlanden|utrecht|lopik|heerlen|arnhem", re.I)
+ORG_VAKGEBIED = re.compile(r"stedin|tennet|alliander|waternet|dunea|evides|oasen|hoogheemraad|waterschap", re.I)
+
+
+def relevant(titel, org=""):
+    # vakgebied uit de titel; bij netbeheerders/waterbedrijven telt de opdrachtgever mee (ICT e.d. valt al af via NIET)
+    if "verordening" in titel.lower():
+        return False
+    return bool(freep.ROL.search(titel)) and not NIET.search(titel) and bool(VAKGEBIED.search(titel) or ORG_VAKGEBIED.search(org))
 
 
 def sleutel(titel, org):
@@ -47,7 +59,7 @@ def bedrag(x):
 def van_freep():
     rijen = []
     for j in freep.opdrachten():
-        if not (relevant(j["title"]) and freep.in_regio(j)):
+        if not (relevant(j["title"], j.get("company_name", "")) and freep.in_regio(j)) or BUITEN.search(j.get("company_name", "")):
             continue
         tarief = j.get("rate_max")
         rijen.append(dict(opdracht=j["title"], opdrachtgever=j.get("company_name", ""), plaats=j.get("location_province", ""),
@@ -60,7 +72,7 @@ def van_freep():
 def van_mipublic():
     rijen = []
     for o in mipublic.opdrachten():
-        if not (relevant(o["titel"]) and mipublic.in_regio(o)):
+        if not (relevant(o["titel"], o["org"]) and mipublic.in_regio(o)):
             continue
         rijen.append(dict(opdracht=o["titel"], opdrachtgever=o["org"], plaats=o["plaats"], uren=o["uren"],
                           tarief=bedrag(o["tarief"]) or "geen maximum",
@@ -93,12 +105,14 @@ def van_dpp(dagen=10):
     urls = re.findall(r"<loc>(https://depubliekepartner.nl/nieuwste-opdrachten/[^<]+)</loc>", sm)[-dagen:]
     with ThreadPoolExecutor(4) as ex:
         alle = [r for dag in ex.map(dpp_dag, urls) if dag for r in dag]
-    return [r for r in alle if relevant(r["opdracht"]) and REGIO.search(r["plaats"] + " " + r["opdrachtgever"])]
+    # De Publieke Partner: de standplaats beslist (RVO in Heerlen valt af, ook al zit RVO ook in Den Haag)
+    return [r for r in alle if relevant(r["opdracht"], r["opdrachtgever"]) and REGIO.search(r["plaats"])]
 
 
 if __name__ == "__main__":
     try:
-        rows = {r["sleutel"]: r for r in csv.DictReader(open(CSV))}
+        rows = {r["sleutel"]: r for r in csv.DictReader(open(CSV))
+                if relevant(r["opdracht"], r["opdrachtgever"]) and not BUITEN.search(r["opdrachtgever"] + " " + r["plaats"])}
     except FileNotFoundError:
         rows = {}
     nieuw = 0
@@ -123,7 +137,7 @@ if __name__ == "__main__":
             oud.update(geplaatst=r["geplaatst"], week=str(d.isocalendar()[1]), maand=d.strftime("%Y-%m"))
         oud["link_" + r["platform"]] = r["link"]
         oud["platforms"] = " + ".join(p for p in ("freep", "mipublic", "dpp") if oud.get("link_" + p))
-        oud["domein"] = "ja" if freep.DOMEIN.search(oud["opdracht"] + " " + oud["opdrachtgever"]) else "nee"
+        oud["domein"] = "ja"
     with open(CSV, "w", newline="") as fh:
         w = csv.DictWriter(fh, fieldnames=VELDEN)
         w.writeheader()
