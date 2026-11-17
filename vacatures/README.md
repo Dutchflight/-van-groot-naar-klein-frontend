@@ -22,7 +22,7 @@ Voorkeur: veel vrijheid, aan opdrachtgeverszijde, grote eigen verantwoordelijkhe
 
 **Zzp-opdrachten bijhouden:** `python3 vacatures/tools/zzp.py` voegt Freep, MiPublic en De Publieke Partner samen in `vacatures/data/zzp-opdrachten.csv` (één rij per opdracht, met week, maand, uren, maximumtarief, sluitingsdatum, platforms en link). Staat ook in het dashboard, sectie 'Zzp- en interimopdrachten per week'.
 
-**Andere zzp-platforms:** MiPublic (`python3 vacatures/tools/mipublic.py`, met sluitingsdatum en tarief), De Publieke Partner (dagelijkse lijst op depubliekepartner.nl/nieuwste-opdrachten, veel detachering). Niet automatisch: overheidzzp.nl (blokkeert; aanvullen via schermafbeeldingen van de gebruiker), Striive en Flexspot (alleen met account/JavaScript). Freelance.nl niet gebruiken: zoekresultaten zijn vaak gearchiveerde opdrachten.
+**Andere zzp-platforms:** MiPublic (`python3 vacatures/tools/mipublic.py`, met sluitingsdatum en tarief), De Publieke Partner (dagelijkse lijst op depubliekepartner.nl/nieuwste-opdrachten, veel detachering). Niet automatisch: overheidzzp.nl (blokkeert; aanvullen via schermafbeeldingen van de gebruiker), Striive en Flexspot (alleen met account/JavaScript). Freelance.nl (civiele techniek): `node vacatures/tools/freelance_nl.mjs` leest de 15 nieuwste opdrachten via een browserweergave; alleen status 'Gepubliceerd' en niet ouder dan 30 dagen tellen mee (zoekresultaten elders tonen vaak gearchiveerde opdrachten). Sluitingsdatum en tarief zijn alleen na inloggen zichtbaar.
 
 **TenneT:** alleen standplaats **Gouda** (hoofdkantoor Arnhem, ca. 1× per week). Controle: `python3 vacatures/tools/tennet.py`.
 

@@ -7,7 +7,9 @@ Schrijft vacatures/data/zzp-opdrachten.csv bij: projectleiding in civiel/infra/r
 import csv
 import datetime
 import html
+import json
 import re
+import subprocess
 import sys
 from concurrent.futures import ThreadPoolExecutor
 
@@ -19,7 +21,7 @@ from publicaties import REGIO  # noqa: E402
 
 CSV = "vacatures/data/zzp-opdrachten.csv"
 VELDEN = ["sleutel", "opdracht", "opdrachtgever", "plaats", "uren", "tarief", "contract", "geplaatst", "week", "maand",
-          "sluit", "domein", "platforms", "link", "link_freep", "link_mipublic", "link_dpp"]
+          "sluit", "domein", "platforms", "link", "link_freep", "link_mipublic", "link_dpp", "link_freelance"]
 
 
 NIET = re.compile(r"ondersteun|\bpmo\b|assistent|secretar|co[öo]rdin|officer|\bict\b|\bit\b|informatie|digital|\bai\b|"
@@ -28,7 +30,7 @@ NIET = re.compile(r"ondersteun|\bpmo\b|assistent|secretar|co[öo]rdin|officer|\b
 
 # alleen het vakgebied van de gebruiker: civiel, infra, openbare ruimte, gebiedsontwikkeling, energie/warmte, water
 VAKGEBIED = re.compile(r"civiel(?!e?\s*recht)|civieltechn|kunstwerk|infra|openbare ruimte|buitenruimte|wegen|brug|riool|"
-                       r"water|dijk|kade|gebiedsontwikkel|deelgebied|ruimtelijk|energie|warmte|netbeheer|netcongestie|natuur|tractie|spoor", re.I)
+                       r"water|dijk|kade|gebiedsontwikkel|deelgebied|ruimtelijk|energie|warmte|netbeheer|netcongestie|natuur|tractie|spoor|metro", re.I)
 # opdrachtgevers die Freep onder Zuid-Holland zet maar buiten de regio liggen
 BUITEN = re.compile(r"vijfheerenlanden|utrecht|lopik|heerlen|arnhem", re.I)
 ORG_VAKGEBIED = re.compile(r"stedin|tennet|alliander|waternet|dunea|evides|oasen|hoogheemraad|waterschap", re.I)
@@ -42,7 +44,9 @@ def relevant(titel, org=""):
 
 
 def sleutel(titel, org):
+    titel = re.sub(r"^\s*vacature( functiedomein \w+)?\s*:\s*", "", titel, flags=re.I)
     titel = re.sub(r"\s+[-–]\s+(cluster|team|afdeling|directie)\b.*$", "", titel, flags=re.I)
+    org = re.sub(r"port of rotterdam", "havenbedrijf rotterdam", org, flags=re.I)
     titel = re.sub(r"\(.*?\)|\b(sr|senior|medior|junior)\b\.?", " ", titel, flags=re.I)
     norm = lambda s: re.sub(r"[^a-z0-9]+", " ", s.lower().replace("gemeente ", "").replace("stichting ", "")).strip()
     return norm(titel)[:60] + "|" + norm(org)[:40]
@@ -100,6 +104,33 @@ def dpp_dag(url):
     return rijen
 
 
+def van_freelance():
+    """Freelance.nl (civiele techniek): alleen status 'Gepubliceerd' en niet ouder dan 30 dagen."""
+    script = __file__.rsplit("/", 1)[0] + "/freelance_nl.mjs"
+    try:
+        uit = subprocess.run(["node", script], capture_output=True, text=True, timeout=600).stdout
+        lijst = json.loads(uit or "[]")
+    except (subprocess.SubprocessError, ValueError, OSError):
+        return []
+    grens = datetime.date.today() - datetime.timedelta(days=30)
+    rijen = []
+    for o in lijst:
+        try:
+            d, m, j = (int(x) for x in o["geplaatst"].split("-"))
+            geplaatst = datetime.date(j, m, d)
+        except (ValueError, KeyError):
+            continue
+        plaats = o.get("plaats", "")
+        if o.get("status") != "Gepubliceerd" or geplaatst < grens or not relevant(o["titel"]):
+            continue
+        if plaats and not REGIO.search(plaats):
+            continue
+        rijen.append(dict(opdracht=o["titel"], opdrachtgever="", plaats=plaats or "onbekend", uren=o.get("uren", ""),
+                          tarief="n.b. (na inloggen)", contract="", geplaatst=geplaatst.isoformat(), sluit="",
+                          platform="freelance", link=o["url"]))
+    return rijen
+
+
 def van_dpp(dagen=10):
     sm = get("https://depubliekepartner.nl/nieuwste-opdrachten-sitemap.xml")
     urls = re.findall(r"<loc>(https://depubliekepartner.nl/nieuwste-opdrachten/[^<]+)</loc>", sm)[-dagen:]
@@ -116,7 +147,7 @@ if __name__ == "__main__":
     except FileNotFoundError:
         rows = {}
     nieuw = 0
-    for r in van_freep() + van_mipublic() + van_dpp():
+    for r in van_freep() + van_mipublic() + van_dpp() + van_freelance():
         k = sleutel(r["opdracht"], r["opdrachtgever"])
         oud = rows.get(k)
         if not oud:
@@ -136,7 +167,9 @@ if __name__ == "__main__":
             d = datetime.date.fromisoformat(r["geplaatst"])
             oud.update(geplaatst=r["geplaatst"], week=str(d.isocalendar()[1]), maand=d.strftime("%Y-%m"))
         oud["link_" + r["platform"]] = r["link"]
-        oud["platforms"] = " + ".join(p for p in ("freep", "mipublic", "dpp") if oud.get("link_" + p))
+        extra = " + overheidzzp" if "overheidzzp" in oud.get("platforms", "") else ""
+        oud["platforms"] = " + ".join(p for p in ("freep", "mipublic", "dpp", "freelance") if oud.get("link_" + p)) + extra
+
         oud["domein"] = "ja"
     with open(CSV, "w", newline="") as fh:
         w = csv.DictWriter(fh, fieldnames=VELDEN)
