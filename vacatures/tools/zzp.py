@@ -140,6 +140,31 @@ def van_dpp(dagen=10):
     return [r for r in alle if relevant(r["opdracht"], r["opdrachtgever"]) and REGIO.search(r["plaats"])]
 
 
+def samenvoegen(rows):
+    """Voeg rijen samen met dezelfde (genormaliseerde) titel en dezelfde of een onbekende opdrachtgever."""
+    groepen = {}
+    for r in sorted(rows.values(), key=lambda r: (r["opdrachtgever"] == "", r["geplaatst"])):
+        r["sleutel"] = sleutel(r["opdracht"], r["opdrachtgever"])
+        titel, org = r["sleutel"].split("|", 1)
+        titel, org = titel.replace(" ", ""), org[:15]
+        doel = next((g for (t, o), g in groepen.items() if t == titel and (o == org or not org or not o)), None)
+        if doel is None:
+            groepen[(titel, org)] = r
+            continue
+        for veld in ("opdrachtgever", "plaats", "uren", "contract", "sluit"):
+            if not doel[veld] and r[veld]:
+                doel[veld] = r[veld]
+        if doel["tarief"] in ("", "n.b.", "n.b. (na inloggen)") and r["tarief"] not in ("", "n.b.", "n.b. (na inloggen)"):
+            doel["tarief"] = r["tarief"]
+        if r["geplaatst"] and r["geplaatst"] < doel["geplaatst"]:
+            doel.update(geplaatst=r["geplaatst"], week=r["week"], maand=r["maand"])
+        for p in ("freep", "mipublic", "dpp", "freelance"):
+            doel["link_" + p] = doel.get("link_" + p) or r.get("link_" + p, "")
+        extra = " + overheidzzp" if "overheidzzp" in doel["platforms"] + r["platforms"] else ""
+        doel["platforms"] = " + ".join(p for p in ("freep", "mipublic", "dpp", "freelance") if doel.get("link_" + p)) + extra
+    return {r["sleutel"]: r for r in groepen.values()}
+
+
 if __name__ == "__main__":
     try:
         rows = {r["sleutel"]: r for r in csv.DictReader(open(CSV))
@@ -171,6 +196,7 @@ if __name__ == "__main__":
         oud["platforms"] = " + ".join(p for p in ("freep", "mipublic", "dpp", "freelance") if oud.get("link_" + p)) + extra
 
         oud["domein"] = "ja"
+    rows = samenvoegen(rows)
     with open(CSV, "w", newline="") as fh:
         w = csv.DictWriter(fh, fieldnames=VELDEN)
         w.writeheader()
