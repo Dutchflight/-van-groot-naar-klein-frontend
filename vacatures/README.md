@@ -28,7 +28,9 @@ Voorkeur: veel vrijheid, aan opdrachtgeverszijde, grote eigen verantwoordelijkhe
 
 **Warmte Leidse Regio (warmteleidseregio.nl):** toekomstig publiek warmtebedrijf van zes gemeenten met NDW (EBN) en Firan; oprichting verwacht in 2027. Nog geen vacaturepagina (18-11-2026). Controle: `python3 vacatures/tools/warmteleidseregio.py` meldt vacature-/werken-bij-links of -teksten en nieuwe nieuwsberichten.
 
-**Niet volgen:** Eneco (op verzoek van de gebruiker).
+**Flextender (gemeentelijke inhuur):** het opdrachtenoverzicht vraagt een login, dus geen script. Wekelijks één WebSearch (allowed_domains app.flextender.nl) naar warmte/warmtebedrijf/kwartiermaker/projectleider in Zuid-Holland; de losse opdracht-pdf's (`app.flextender.nl/nologin/jobtopdf/<nr>`) zijn openbaar en geven eisen, schaal en max. uurtarief. Referentie: Kwartiermaker Warmtebedrijf Zwolle (24309; schaal 12/13, max. € 170/uur, 16–24 u, HBO+, 5 jr warmtenetten + 5 jr overheid).
+
+**Niet volgen:** Eneco; WarmteStad (Groningen, alleen als referentie) (op verzoek van de gebruiker).
 
 **Vattenfall (stadswarmte):** vacatures in Rotterdam, Amsterdam/Diemen en Zuid-Holland. Controle: `python3 vacatures/tools/vattenfall.py`. Salaris niet vermeld (Hay-functiegroepen, schalen intern); wel 8% vakantiegeld, 4,5% eindejaarsuitkering, tot 3,5% winstdeling, ABP (70% werkgever), 13 ADV-dagen bij 40-urige werkweek.
 
