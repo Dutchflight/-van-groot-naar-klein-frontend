@@ -68,7 +68,8 @@ def alliander():
             slug = re.search(r"/vacatures/([^/]+)/jr\d+", u, re.I).group(1)
             s = re.sub(r"\s+", " ", html.unescape(re.sub(r"<[^>]+>", " ", re.sub(r"<script.*?</script>|<style.*?</style>", "", t, flags=re.S))))
             plaats = re.search(r"€ ?[\d.]+ ?- ?€ ?[\d.]+ ([A-Z][a-zA-Z\- ]+?) (?:HBO|MBO|WO|Hbo|Mbo|Wo)", s)
-            return "Alliander", d.group(1), slug.replace("-", " ").capitalize(), u, plaats.group(1) if plaats else ""
+            werkgever = "Firan" if re.search(r'"vacancy\.employer":"Firan', t) else "Alliander"
+            return werkgever, d.group(1), slug.replace("-", " ").capitalize(), u, plaats.group(1) if plaats else ""
 
     with ThreadPoolExecutor(8) as ex:
         return [r for r in ex.map(one, urls) if r]
