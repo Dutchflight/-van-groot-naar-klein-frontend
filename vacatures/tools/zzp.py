@@ -20,7 +20,7 @@ from drinkwater import get, veilig  # noqa: E402
 from publicaties import REGIO  # noqa: E402
 
 CSV = "vacatures/data/zzp-opdrachten.csv"
-VELDEN = ["sleutel", "opdracht", "opdrachtgever", "plaats", "uren", "tarief", "contract", "geplaatst", "week", "maand",
+VELDEN = ["sleutel", "opdracht", "opdrachtgever", "plaats", "uren", "tarief", "contract", "geplaatst", "gevonden", "week", "maand",
           "sluit", "domein", "platforms", "link", "link_freep", "link_mipublic", "link_dpp", "link_freelance"]
 
 
@@ -151,8 +151,8 @@ def samenvoegen(rows):
         if doel is None:
             groepen[(titel, org)] = r
             continue
-        for veld in ("opdrachtgever", "plaats", "uren", "contract", "sluit"):
-            if not doel[veld] and r[veld]:
+        for veld in ("opdrachtgever", "plaats", "uren", "contract", "sluit", "gevonden"):
+            if not doel.get(veld) and r.get(veld):
                 doel[veld] = r[veld]
         if doel["tarief"] in ("", "n.b.", "n.b. (na inloggen)") and r["tarief"] not in ("", "n.b.", "n.b. (na inloggen)"):
             doel["tarief"] = r["tarief"]
@@ -180,6 +180,7 @@ if __name__ == "__main__":
             d = datetime.date.fromisoformat(r["geplaatst"]) if r["geplaatst"] else datetime.date.today()
             oud = rows[k] = {v: "" for v in VELDEN}
             oud.update(sleutel=k, opdracht=r["opdracht"], opdrachtgever=r["opdrachtgever"], geplaatst=d.isoformat(),
+                       gevonden=datetime.date.today().isoformat(),
                        week=str(d.isocalendar()[1]), maand=d.strftime("%Y-%m"), link=r["link"])
         for veld in ("plaats", "uren", "contract", "sluit"):
             if r[veld] and not oud[veld]:

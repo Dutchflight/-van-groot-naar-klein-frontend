@@ -28,7 +28,7 @@ REGIO = re.compile(r"amsterdam|zuid-holland|delft|den haag|'s-gravenhage|rijswij
                    r"gouda|schiedam|vlaardingen|westland|naaldwijk|monster|heinenoord|leidschendam|voorburg|alphen|"
                    r"spijkenisse|capelle|barendrecht|ridderkerk|wassenaar|katwijk|noordwijk|pijnacker|nootdorp|zwijndrecht|kralingen|houtrust", re.I)
 PLAATS_WATERSCHAP = {"Delfland": "Delft", "Rijnland": "Leiden", "Waternet": "Amsterdam"}
-VELDEN = ["werkgever", "gepubliceerd", "week", "titel", "niveau", "schaal", "plaats", "link"]
+VELDEN = ["werkgever", "gepubliceerd", "gevonden", "week", "titel", "niveau", "schaal", "plaats", "link"]
 
 
 def in_regio(plaats):
@@ -116,6 +116,7 @@ if __name__ == "__main__":
         r.setdefault("schaal", "")
         r.setdefault("link", "")
         r.setdefault("plaats", "")
+        r.setdefault("gevonden", "")
     # dezelfde werkgever + titel binnen 60 dagen geldt als herplaatsing, niet als nieuwe vacature
     eerder = {}
     for r in rows:
@@ -150,7 +151,8 @@ if __name__ == "__main__":
         datums.append(d)
         week = d.isocalendar()[1] if d else ""
         nieuw.append({"werkgever": werkgever, "gepubliceerd": datum, "week": week, "titel": titel,
-                      "niveau": niveau(werkgever, titel, sch, plaats), "schaal": sch, "plaats": plaats, "link": url})
+                      "niveau": niveau(werkgever, titel, sch, plaats), "schaal": sch, "plaats": plaats, "link": url,
+                      "gevonden": vandaag.isoformat()})
     rows += nieuw
     for r in rows:
         r["niveau"] = niveau(r["werkgever"], r["titel"], r.get("schaal", ""), r.get("plaats", ""))
