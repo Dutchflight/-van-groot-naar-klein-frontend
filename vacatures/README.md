@@ -24,6 +24,8 @@ Voorkeur: veel vrijheid, aan opdrachtgeverszijde, grote eigen verantwoordelijkhe
 
 **Andere zzp-platforms:** MiPublic (`python3 vacatures/tools/mipublic.py`, met sluitingsdatum en tarief), De Publieke Partner (dagelijkse lijst op depubliekepartner.nl/nieuwste-opdrachten, veel detachering). Niet automatisch: overheidzzp.nl (blokkeert; aanvullen via schermafbeeldingen van de gebruiker), Striive en Flexspot (alleen met account/JavaScript). Freelance.nl (civiele techniek): `node vacatures/tools/freelance_nl.mjs` leest de 15 nieuwste opdrachten via een browserweergave; alleen status 'Gepubliceerd' en niet ouder dan 30 dagen tellen mee (zoekresultaten elders tonen vaak gearchiveerde opdrachten). Sluitingsdatum en tarief zijn alleen na inloggen zichtbaar.
 
+**Vattenfall (stadswarmte):** vacatures in Rotterdam, Amsterdam/Diemen en Zuid-Holland. Controle: `python3 vacatures/tools/vattenfall.py`. Salaris niet vermeld (Hay-functiegroepen, schalen intern); wel 8% vakantiegeld, 4,5% eindejaarsuitkering, tot 3,5% winstdeling, ABP (70% werkgever), 13 ADV-dagen bij 40-urige werkweek.
+
 **TenneT:** alleen standplaats **Gouda** (hoofdkantoor Arnhem, ca. 1× per week). Controle: `python3 vacatures/tools/tennet.py`.
 
 **Drinkwater Evides en Oasen:** projectleider- en projectmanagerfuncties in de regio. Controle: `python3 vacatures/tools/drinkwater.py` (Evides met publicatiedatum en groep uit het maximumsalaris; Oasen met schaal uit de tekst).

@@ -18,6 +18,7 @@ import stedin_schalen  # noqa: E402
 import waterschappen  # noqa: E402
 import drinkwater  # noqa: E402
 import tennet  # noqa: E402
+import vattenfall  # noqa: E402
 
 CSV = "vacatures/data/vacatures-per-week.csv"
 PASSEND = re.compile(r"project ?leider|project ?manager|programma ?manager|manager .*(realisatie|project)", re.I)
@@ -128,6 +129,8 @@ if __name__ == "__main__":
         gevonden.append((w, start, t, sch, url, PLAATS_WATERSCHAP[w]))
     for w, t, sch, start, plaats, url in drinkwater.vacatures():
         gevonden.append((w, start, t, sch, url, plaats))
+    for w, t, start, plaats, _sluit, url in vattenfall.vacatures():
+        gevonden.append((w, start, t, "", url, plaats))
     for w, t, _sal, start, plaats, url in tennet.vacatures():
         if plaats.lower() in tennet.STANDPLAATS:  # TenneT: alleen standplaats Gouda
             gevonden.append((w, start, t, "", url, plaats))
