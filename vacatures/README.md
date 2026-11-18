@@ -26,6 +26,8 @@ Voorkeur: veel vrijheid, aan opdrachtgeverszijde, grote eigen verantwoordelijkhe
 
 **Firan (warmtenetten, Alliander):** vacatures via werkenbij.alliander.com (werkgever = Firan) en melding op www.firan.nl/werken-bij. Controle: `python3 vacatures/tools/firan.py`. Op 18-11-2026: geen openstaande vacatures.
 
+**Warmte Leidse Regio (warmteleidseregio.nl):** toekomstig publiek warmtebedrijf van zes gemeenten met NDW (EBN) en Firan; oprichting verwacht in 2027. Nog geen vacaturepagina (18-11-2026). Controle: `python3 vacatures/tools/warmteleidseregio.py` meldt vacature-/werken-bij-links of -teksten en nieuwe nieuwsberichten.
+
 **Niet volgen:** Eneco (op verzoek van de gebruiker).
 
 **Vattenfall (stadswarmte):** vacatures in Rotterdam, Amsterdam/Diemen en Zuid-Holland. Controle: `python3 vacatures/tools/vattenfall.py`. Salaris niet vermeld (Hay-functiegroepen, schalen intern); wel 8% vakantiegeld, 4,5% eindejaarsuitkering, tot 3,5% winstdeling, ABP (70% werkgever), 13 ADV-dagen bij 40-urige werkweek.
