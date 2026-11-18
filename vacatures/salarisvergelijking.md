@@ -122,3 +122,20 @@ Netto = besteedbaar per jaar, na belasting en na de eigen pensioeninleg. Pensioe
 
 Aannames zzp: € 6.000 zakelijke kosten, € 6.500 AOV, € 20.000 lijfrente (aftrekbaar), zelfstandigenaftrek € 1.200, MKB-winstvrijstelling 12,7%, Zvw 5,26%.
 Geen WW, geen doorbetaling bij ziekte (AOV dekt deels), geen betaald verlof; Wet DBA kan zzp bij sommige opdrachtgevers uitsluiten.
+
+## Vattenfall (bedrijfs-cao 2025–2026, aanvulling op cao PLb) — 18-11-2026
+
+- Functiewaardering met de Hay-methode, 14 functiegroepen, open schalen (80–120% van het middelpunt, middelpunt = mediaan algemene markt). De bedragen staan niet in de cao, alleen op het interne Mijn HR Portal.
+- **Project Manager Stadswarmte Rotterdam (VF1, jid-53377): geen salaris vermeld.** Schatting op basis van vergelijkbare Vattenfall-vacatures (bruto per maand, excl. vakantiegeld, 38-uurscontract bij een 40-urige werkweek, dus 13 ADV-dagen):
+
+| Vattenfall-vacature | Salaris |
+|---|---|
+| Projectmanager Publieke Laadinfrastructuur (Amsterdam) | € 5.000 – 7.000 |
+| Exploitatie Manager (Amsterdam) | € 4.800 – 6.100 |
+| Cost Engineer Warmte (schaal 9) | € 4.600 – 5.800 |
+| Opzichter Stadswarmte (Almere) | € 3.800 – 4.500 |
+
+→ **Waarschijnlijk ca. € 5.000 – 7.000** (zelfde niveau als de projectmanager laadinfra). Vraag het na bij de recruiter.
+
+- Extra's: 8% vakantiegeld, 4,5% eindejaarsuitkering, tot 3,5% winstdeling (samen 12,5–16%); pensioen ABP (Vattenfall betaalt 70% van de premie); eventueel een auto van de zaak.
+- Vergelijking per maand bij vergelijkbaar niveau: Stedin C09 € 5.209 – 7.267 (40 u); cao Waterbedrijven groep 12 € 5.402 – 7.507 (40 u); waterschap schaal 12 € 5.303 – 7.417 (36 u, IKB 21%).
