@@ -21,7 +21,34 @@ from publicaties import REGIO  # noqa: E402
 
 CSV = "vacatures/data/zzp-opdrachten.csv"
 VELDEN = ["sleutel", "opdracht", "opdrachtgever", "plaats", "uren", "tarief", "contract", "geplaatst", "gevonden", "week", "maand",
-          "sluit", "domein", "platforms", "link", "link_freep", "link_mipublic", "link_dpp", "link_freelance"]
+          "sluit", "domein", "platforms", "link", "link_freep", "link_mipublic", "link_dpp", "link_freelance", "voorkeur"]
+
+
+# voorkeur gebruiker: tarief >= € 100, 24-32 uur per week, korte reistijd vanuit Leiden (Katwijk extra interessant)
+DICHTBIJ = re.compile(r"leiden|katwijk|oegstgeest|leiderdorp|voorschoten|zoeterwoude|noordwijk|teylingen|wassenaar|"
+                      r"kaag en braassem|alphen|lisse|hillegom|rijnland|den haag|'s-gravenhage|delft|zoetermeer|rijswijk|"
+                      r"leidschendam|haarlemmermeer|hoofddorp", re.I)
+
+VERDER = re.compile(r"rotterdam|capelle|schiedam|vlaardingen|gouda|westland|amsterdam|haarlem|amstelveen|dordrecht", re.I)
+
+
+def voorkeur(r):
+    """Korte beoordeling t.o.v. de wensen van de gebruiker, bv. 'tarief ✓ · uren ✓ · reistijd ✓ (Katwijk)'."""
+    getallen = [int(x) for x in re.findall(r"\d{2,3}", r["tarief"].replace(".", ""))]
+    tarief = "tarief ✓" if getallen and max(getallen) >= 100 else ("tarief ✗" if getallen else "tarief ?")
+    uren = [int(x) for x in re.findall(r"\d+", r["uren"])]
+    if not uren:
+        u = "uren ?"
+    elif min(uren) <= 32 and max(uren) >= 24:
+        u = "uren ✓"
+    else:
+        u = "uren ✗ (" + r["uren"] + ")"
+    plek = r["opdrachtgever"] + " " + r["plaats"]
+    reis = ("reistijd ✓" if DICHTBIJ.search(plek) else
+            "reistijd ± (ca. 45-60 min)" if VERDER.search(plek) else "reistijd ?")
+    if re.search(r"katwijk", plek, re.I):
+        reis += " (Katwijk)"
+    return " · ".join((tarief, u, reis))
 
 
 NIET = re.compile(r"ondersteun|\bpmo\b|assistent|secretar|co[öo]rdin|officer|\bict\b|\bit\b|informatie|digital|\bai\b|"
@@ -198,6 +225,8 @@ if __name__ == "__main__":
 
         oud["domein"] = "ja"
     rows = samenvoegen(rows)
+    for r in rows.values():
+        r["voorkeur"] = voorkeur(r)
     with open(CSV, "w", newline="") as fh:
         w = csv.DictWriter(fh, fieldnames=VELDEN)
         w.writeheader()
