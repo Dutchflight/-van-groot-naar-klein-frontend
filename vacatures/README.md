@@ -30,6 +30,8 @@ Voorkeur: veel vrijheid, aan opdrachtgeverszijde, grote eigen verantwoordelijkhe
 
 **Flextender (gemeentelijke inhuur):** het opdrachtenoverzicht vraagt een login, dus geen script. Wekelijks één WebSearch (allowed_domains app.flextender.nl) naar warmte/warmtebedrijf/kwartiermaker/projectleider in Zuid-Holland; de losse opdracht-pdf's (`app.flextender.nl/nologin/jobtopdf/<nr>`) zijn openbaar en geven eisen, schaal en max. uurtarief. Referentie: Kwartiermaker Warmtebedrijf Zwolle (24309; schaal 12/13, max. € 170/uur, 16–24 u, HBO+, 5 jr warmtenetten + 5 jr overheid).
 
+**Gemeenten Leidse regio (werkenindeleidseregio.nl: Leiden, Leiderdorp, Oegstgeest, Zoeterwoude) en Katwijk:** schaal 11–13, projectleiding. Controle: `python3 vacatures/tools/leidseregio.py` (★ = projectleider/-manager). Katwijk heeft geen eigen bekende vacaturesite; via Binnenlands Bestuur/WebSearch.
+
 **Wensen zzp/interim (21-11-2026):** tarief vanaf € 100 per uur, 24–32 uur per week, korte reistijd vanuit Leiden; Katwijk extra interessant. `zzp.py` zet dit in de kolom `voorkeur` (tarief/uren/reistijd ✓, ✗ of ?; Rotterdam, Westland, Amsterdam e.d. = reistijd ±).
 
 **Niet volgen:** Eneco; WarmteStad (Groningen, alleen als referentie) (op verzoek van de gebruiker).
