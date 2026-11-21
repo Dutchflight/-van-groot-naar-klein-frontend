@@ -36,7 +36,14 @@ def vacature(url):
 
 
 def vacatures():
-    urls = sorted(set(re.findall(r'href="(https://werkenindeleidseregio\.nl/vacatures/[^"?#]+-\d+/)"', get(BASIS))))
+    urls = set()
+    for pagina in range(1, 30):  # de site toont 10 per pagina ('Meer vacatures laden' = ?_paged=N)
+        nieuw = set(re.findall(r'href="(https://werkenindeleidseregio\.nl/vacatures/[^"?#]+-\d+/)"',
+                               get(BASIS + (f"?_paged={pagina}" if pagina > 1 else "")))) - urls
+        if not nieuw:
+            break
+        urls |= nieuw
+    urls = sorted(urls)
     with ThreadPoolExecutor(6) as ex:
         return [v for v in ex.map(vacature, urls) if v]
 
