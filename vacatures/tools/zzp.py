@@ -25,7 +25,7 @@ VELDEN = ["sleutel", "opdracht", "opdrachtgever", "plaats", "uren", "tarief", "c
 
 
 # voorkeur gebruiker: tarief >= € 100, 24-32 uur per week, korte reistijd vanuit Leiden (Katwijk extra interessant)
-DICHTBIJ = re.compile(r"leiden|katwijk|oegstgeest|leiderdorp|voorschoten|zoeterwoude|noordwijk|teylingen|wassenaar|"
+DICHTBIJ = re.compile(r"leiden|katwijk|oegstgeest|leiderdorp|voorschoten|zoeterwoude|noordwijk|teylingen|voorhout|sassenheim|warmond|wassenaar|"
                       r"kaag en braassem|alphen|lisse|hillegom|rijnland|den haag|'s-gravenhage|delft|zoetermeer|rijswijk|"
                       r"leidschendam|haarlemmermeer|hoofddorp", re.I)
 
