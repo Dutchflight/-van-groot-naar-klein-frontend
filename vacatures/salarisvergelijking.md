@@ -139,3 +139,16 @@ Geen WW, geen doorbetaling bij ziekte (AOV dekt deels), geen betaald verlof; Wet
 
 - Extra's: 8% vakantiegeld, 4,5% eindejaarsuitkering, tot 3,5% winstdeling (samen 12,5–16%); pensioen ABP (Vattenfall betaalt 70% van de premie); eventueel een auto van de zaak.
 - Vergelijking per maand bij vergelijkbaar niveau: Stedin C09 € 5.209 – 7.267 (40 u); cao Waterbedrijven groep 12 € 5.402 – 7.507 (40 u); waterschap schaal 12 € 5.303 – 7.417 (36 u, IKB 21%).
+
+## NEO NL (eigen CAO NEO NL, Hay-functiegroepen) — 25-11-2026
+
+Salaristabel niet openbaar. Wat bekend is (40 u, bruto/maand, + 10,66% IKB, 25 vakantiedagen):
+
+| Functie | Hay | Salaris (max) | Detacheringstarief via MiPublic |
+|---|---|---|---|
+| Communicatieadviseur (medior) | 14 | € 6.600 | max € 94/uur |
+| Business Controller | ? | € 6.400 – 6.631 | max € 113/uur |
+| Senior Solutions Architect | ? | ? | max € 113/uur |
+| **Project Manager (10 jr megaprojecten, PMP/PRINCE2)** | ? (verwacht ca. 17–18) | **schatting € 7.500 – 9.500** | ? |
+
+Schatting: Hay-schalen stijgen doorgaans ca. 8–10% per groep; de PM-functie ligt naar verwachting 3–4 groepen boven de medior adviseur. Navragen bij NEO NL (Talent Acquisition).
