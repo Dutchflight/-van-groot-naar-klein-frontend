@@ -32,6 +32,8 @@ Voorkeur: veel vrijheid, aan opdrachtgeverszijde, grote eigen verantwoordelijkhe
 
 **Gemeenten Leidse regio (werkenindeleidseregio.nl: Leiden, Leiderdorp, Oegstgeest, Zoeterwoude) en Katwijk:** schaal 11–13, projectleiding. Controle: `python3 vacatures/tools/leidseregio.py` (★ = projectleider/-manager). Katwijk heeft geen eigen bekende vacaturesite; via Binnenlands Bestuur/WebSearch.
 
+**Gemeente Zoetermeer:** geen eigen vacaturesite; vacatures via magnet.me. Controle: `python3 vacatures/tools/zoetermeer.py` (projectleiding; ★ = schaal 11–13 of ≥ € 6.000). Zoetermeer werkt aan programma Entree en een warmteprogramma.
+
 **NEO NL (nieuwbouw kerncentrales, Den Haag; zelfstandige organisatie, EZK enige aandeelhouder):** `python3 vacatures/tools/neonl.py` (★ = projectmanager). Salarissen staan niet in de vacatures; referentie Business Controller tot € 6.400 (40 u) + 10,66% IKB, 25 vakantiedagen.
 
 **Wensen zzp/interim (21-11-2026):** tarief vanaf € 100 per uur, 24–32 uur per week, korte reistijd vanuit Leiden; Katwijk extra interessant. `zzp.py` zet dit in de kolom `voorkeur` (tarief/uren/reistijd ✓, ✗ of ?; Rotterdam, Westland, Amsterdam e.d. = reistijd ±).
