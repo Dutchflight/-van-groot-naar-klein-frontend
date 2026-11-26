@@ -151,4 +151,6 @@ Salaristabel niet openbaar. Wat bekend is (40 u, bruto/maand, + 10,66% IKB, 25 v
 | Senior Solutions Architect | ? | ? | max € 113/uur |
 | **Project Manager (10 jr megaprojecten, PMP/PRINCE2)** | ? (verwacht ca. 17–18) | **schatting € 7.500 – 9.500** | ? |
 
+Let op (26-11-2026): of het vakantiegeld (8%) los komt of in de 10,66% zit, is nergens openbaar te vinden. De Randstad-vacatures van NEO NL met die 10,66% zijn offline. Bij UWV is 10,66% IKB inclusief vakantiegeld; bij het Rijk 16,37% inclusief vakantiegeld. NEO-recruiters hebben @minezk.nl-adressen. Navragen bij NEO NL.
+
 Schatting: Hay-schalen stijgen doorgaans ca. 8–10% per groep; de PM-functie ligt naar verwachting 3–4 groepen boven de medior adviseur. Navragen bij NEO NL (Talent Acquisition).
