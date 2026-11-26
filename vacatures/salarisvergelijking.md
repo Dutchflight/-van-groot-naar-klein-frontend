@@ -166,3 +166,20 @@ Schatting: Hay-schalen stijgen doorgaans ca. 8–10% per groep; de PM-functie li
 | Markt (CPB, MEV 2027) | – | Cao-lonen 2027 ca. 3,8% (2026: 4,2–4,3%); afgeleide inflatie 2027 2,7%. |
 
 **Verwachting cao Waterbedrijven vanaf 1-7-2027:** looptijd 24 maanden (t/m 30-6-2029), totaal ca. 5–6,5%: ca. 2,5–3% per 1-7-2027 en ca. 2–2,5% in 2028, mogelijk met een eenmalige uitkering. Onderhandelingen starten voorjaar 2027; bij een akkoord na de zomer met terugwerkende kracht tot 1-7-2027 (zoals in 2025). Benchmark: PLb 3% + 2%, werkgeversbod NWb 2,5% + 1,5% + 1,5%.
+
+## NEO NL Project Manager vs zzp (netto per maand, model netto_model.py, 26-11-2026)
+
+Aannames: NEO-salaris geschat (niet openbaar), IKB 10,66% met vakantiegeld apart (8%) tenzij anders vermeld; werkgeverspensioen ca. 70% van de premie. Zzp: 44 declarabele weken, € 6.000 kosten, AOV € 6.500 en eigen pensioeninleg € 20.000 per jaar al betaald.
+
+| Variant | Netto/mnd | + pensioen (werkgever of eigen inleg) | ≈ totaal/mnd |
+|---|---|---|---|
+| NEO PM € 7.500, 40 u | 5.208 | ~1.232 | ~6.440 |
+| NEO PM € 8.500, 40 u | 5.686 | ~1.436 | ~7.120 |
+| NEO PM € 9.500, 40 u | 6.177 | ~1.640 | ~7.820 |
+| NEO PM € 8.500, 32 u | 4.874 | ~1.089 | ~5.960 |
+| Zzp € 105 × 32 u | 6.147 | 1.667 | ~7.810 |
+| Zzp € 115 × 32 u | 6.813 | 1.667 | ~8.480 |
+| Zzp € 135 × 32 u | 8.146 | 1.667 | ~9.810 |
+| Waterschap 13 max, 36 u | 5.707 | ~1.408 | ~7.115 |
+
+Conclusie: bij 32 uur levert zzp vanaf ca. € 100–105/uur evenveel op als NEO PM fulltime (€ 8.500–9.500); bij € 115–135 duidelijk meer. Risico's zzp: leegloop tussen opdrachten (1 maand ≈ –8%), geen loondoorbetaling bij ziekte/WW, Wet DBA (vaker via detacheerder), zelfstandigenaftrek daalt verder.
