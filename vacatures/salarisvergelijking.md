@@ -154,3 +154,15 @@ Salaristabel niet openbaar. Wat bekend is (40 u, bruto/maand, + 10,66% IKB, 25 v
 Let op (26-11-2026): of het vakantiegeld (8%) los komt of in de 10,66% zit, is nergens openbaar te vinden. De Randstad-vacatures van NEO NL met die 10,66% zijn offline. Bij UWV is 10,66% IKB inclusief vakantiegeld; bij het Rijk 16,37% inclusief vakantiegeld. NEO-recruiters hebben @minezk.nl-adressen. Navragen bij NEO NL.
 
 Schatting: Hay-schalen stijgen doorgaans ca. 8–10% per groep; de PM-functie ligt naar verwachting 3–4 groepen boven de medior adviseur. Navragen bij NEO NL (Talent Acquisition).
+
+## Stand cao-onderhandelingen en verwachting (26-11-2026)
+
+| Sector | Lopende cao | Stand onderhandelingen 2027 |
+|---|---|---|
+| Netwerkbedrijven (Stedin, Liander) | t/m 31-12-2026 | Bonden: 5,5% (FNV + € 80/mnd), 1 jaar. Werkgevers (5-11): 2,5% per 1-1-2027 + € 600 eenmalig + 1,5% per 1-1-2028 + 1,5% per 1-7-2028, 24 mnd; willen voltijd 38 → 40 uur. Volgende ronde 1-12-2026. |
+| Productie/levering PLb (Vattenfall e.a.) | t/m 2026 | Onderhandelingsresultaat: 3% per 1-1-2027 + 2% per 1-3-2028, looptijd 22 mnd (t/m 31-10-2028); ledenraadpleging 23-11 t/m 2-12-2026. |
+| Waterschappen | t/m 2026 | Bonden: 5,5% incl. prijscompensatie (FNV + € 80), 1 jaar. Werkgevers: 3 jaar met jaarlijkse CBS-prijsstijging; vinden waterschappen al 'aan de bovenkant'. Derde ronde 10-12-2026. |
+| Waterbedrijven (drinkwater) | 1-7-2025 t/m 30-6-2027 | Afgesproken: 1,2% per 1-1-2027 (heronderhandeling alleen als inflatie 2026 > 4%; CPB ca. 2,9%, dus gaat door). Nieuwe cao vanaf 1-7-2027. |
+| Markt (CPB, MEV 2027) | – | Cao-lonen 2027 ca. 3,8% (2026: 4,2–4,3%); afgeleide inflatie 2027 2,7%. |
+
+**Verwachting cao Waterbedrijven vanaf 1-7-2027:** looptijd 24 maanden (t/m 30-6-2029), totaal ca. 5–6,5%: ca. 2,5–3% per 1-7-2027 en ca. 2–2,5% in 2028, mogelijk met een eenmalige uitkering. Onderhandelingen starten voorjaar 2027; bij een akkoord na de zomer met terugwerkende kracht tot 1-7-2027 (zoals in 2025). Benchmark: PLb 3% + 2%, werkgeversbod NWb 2,5% + 1,5% + 1,5%.
