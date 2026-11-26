@@ -32,6 +32,8 @@ Voorkeur: veel vrijheid, aan opdrachtgeverszijde, grote eigen verantwoordelijkhe
 
 **Gemeenten Leidse regio (werkenindeleidseregio.nl: Leiden, Leiderdorp, Oegstgeest, Zoeterwoude) en Katwijk:** schaal 11–13, projectleiding. Controle: `python3 vacatures/tools/leidseregio.py` (★ = projectleider/-manager). Katwijk heeft geen eigen bekende vacaturesite; via Binnenlands Bestuur/WebSearch.
 
+**Waterschappen – extra focus (26-11-2026):** Delfland (ca. 30 min vanuit Leiden) actief volgen; schaal 12/13 met projectleiding óf dijkversterking/regionale keringen (ook omgevings-/technisch manager; geen afdelingsmanagers/teamleiders/adviseurs). Inhuur Delfland: mipublic.nl/opdrachtgevers/hoogheemraadschap-van-delfland.
+
 **Gemeente Zoetermeer:** geen eigen vacaturesite; vacatures via magnet.me. Controle: `python3 vacatures/tools/zoetermeer.py` (projectleiding; ★ = schaal 11–13 of ≥ € 6.000). Zoetermeer werkt aan programma Entree en een warmteprogramma.
 
 **NEO NL (nieuwbouw kerncentrales, Den Haag; zelfstandige organisatie, EZK enige aandeelhouder):** `python3 vacatures/tools/neonl.py` (★ = projectmanager). Salarissen staan niet in de vacatures; referentie Business Controller tot € 6.400 (40 u) + 10,66% IKB, 25 vakantiedagen.

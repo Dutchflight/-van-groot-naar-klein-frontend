@@ -13,6 +13,14 @@ from concurrent.futures import ThreadPoolExecutor
 WATCH = ("12", "13")
 # alleen projectleiding/projectmanagement, geen afdelingsmanagers e.d.
 PROJECT = re.compile(r"project ?leider|project ?manager|programma ?manager|manager .*(realisatie|project)", re.I)
+# dijkversterking / regionale keringen (wens gebruiker 26-11-2026): ook (omgevings-/technisch) managers en leiders
+KERING = re.compile(r"dijk|kering|waterveiligheid|hwbp", re.I)
+GEEN = re.compile(r"afdelingsmanager|teamleider|teammanager|stage", re.I)
+
+
+def past(titel_):
+    return bool((PROJECT.search(titel_) or (KERING.search(titel_) and re.search(r"manager|leider|lead", titel_, re.I)))
+                and not GEEN.search(titel_))
 
 
 def veilig(fn):
@@ -98,5 +106,5 @@ def vacatures():
 if __name__ == "__main__":
     alle = len(sys.argv) > 1 and sys.argv[1] == "alle"
     for werkgever, t, sch, start, sluit, url in vacatures():
-        if alle or (PROJECT.search(t) and sch in WATCH + ("",)):
+        if alle or (past(t) and sch in WATCH + ("",)):
             print(f"schaal {sch or '?'} | {werkgever} | {t} | geplaatst {start or 'n.b.'} | sluit {sluit or 'n.b.'} | {url}")
